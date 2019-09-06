@@ -1,0 +1,37 @@
+:host {
+
+  display: block;
+  padding: 2em;
+
+  mat-card {
+    margin: 1em 0;
+  }
+
+  mat-table {
+
+  }
+
+  .testcase-cell, .comment-cell {
+    max-width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+}
+
+
+@media (max-width: 1000px) {
+
+  .project-cell {
+    display: none;
+  }
+
+}
+
+@media (max-width: 1125px) {
+
+  .testcase-cell, .category-cell {
+    display: none;
+  }
+
+}

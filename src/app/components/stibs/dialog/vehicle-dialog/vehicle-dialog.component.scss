@@ -1,0 +1,32 @@
+:host {
+
+  display: block;
+  min-width: 350px;
+
+.mat-dialog-title {
+  display: flex;
+}
+
+mat-dialog-content {
+
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+}
+
+.mat-raised-button{
+  background-color: #1e5a99;
+  color:#FFFFFF
+}
+
+.mat-raised-button:disabled{
+  background-color: #667380;
+  cursor: not-allowed;
+}
+
+}
+
+
+
+
+

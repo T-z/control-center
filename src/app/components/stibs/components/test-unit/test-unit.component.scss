@@ -1,0 +1,43 @@
+:host {
+  
+  display: block;
+  padding: 2em;
+
+}
+
+.name-cell, .alias-cell, .project-version-cell,.vehicle-cell {
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.vehicle-cell {
+  min-width: 80px;
+  max-width: 100px;
+}
+
+.software-version-cell {
+  min-width: 110px;
+  max-width: 110px;
+}
+
+.vehicle-version-cell {
+  min-width: 115px;
+  max-width: 115px;
+}
+
+@media (max-width: 1000px) {
+    
+  .vehicle-cell {
+    display: none;
+  }
+
+}
+
+@media (max-width: 1125px) {
+    
+  .vehicle-version-cell, .software-version-cell {
+    display: none;
+  }
+
+}

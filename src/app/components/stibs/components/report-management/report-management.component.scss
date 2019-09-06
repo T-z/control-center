@@ -1,0 +1,136 @@
+:host {
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2em;
+
+  mat-card {
+    margin: 1em 0;
+  }
+
+  .protocol-state {
+
+    mat-card-content {
+      text-align: center;
+    }
+
+    mat-form-field {
+      font-size: 0.9em;
+    }
+
+  }
+
+  .report-state {
+
+    .path-cell {
+      min-width: 120px;
+      max-width: 120px;
+    }
+
+    .report-cell {
+
+      display: flex;
+      flex-direction: column;
+
+      .report-row {
+
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        > :nth-child(1) {
+          
+          flex: 1;
+          max-width: 120px;
+          min-width: 120px;
+          overflow: hidden;
+
+          margin-left: 1em;
+          margin-right: 1em;
+
+        }
+
+        :nth-child(2) {
+          
+          flex: 1;
+
+          margin-left: 1em;
+          margin-right: 1em;
+          overflow: hidden;
+
+          &.job {
+
+            &.progress {
+              text-align: center;
+            }
+
+            &.failed {
+              color: red;
+            }
+
+          }
+
+        }
+
+        :nth-child(3) {
+
+          margin-left: 1em;
+          margin-right: 1em;
+          overflow: hidden;
+
+          button {
+            width: 150px;
+          }
+
+        }
+
+      }
+
+      button {
+
+        width: 100%;
+        margin: 5px auto 5px;
+
+          &.final {
+          background-color: #27ad27;
+        }
+
+      }
+
+    }
+
+    .legend {
+
+      display: flex;
+      margin-top: 1em;
+
+      a {
+        margin-left: auto;
+      }
+
+    }
+
+  }
+
+  @media (max-width: 1000px) {
+
+    .datetime-cell {
+      display: none;
+    }
+
+  }
+
+  @media (max-width: 1125px) {
+
+    .progress-cell {
+      font-size: 12px;
+    }
+
+  }
+
+}
+
+.report-comment {
+  min-width: 350px;
+}

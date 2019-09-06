@@ -1,0 +1,19 @@
+
+:host {
+
+  display: block;
+  min-width: 350px;
+
+  .mat-dialog-title {
+    display: flex;
+  }
+
+  mat-dialog-content {
+
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+
+  }
+
+}

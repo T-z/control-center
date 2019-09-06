@@ -1,0 +1,14 @@
+ 
+:host {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+
+  canvas {
+    max-width: 1000px;
+    width: 90%;
+  }
+
+}

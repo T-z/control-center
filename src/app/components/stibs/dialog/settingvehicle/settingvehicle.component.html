@@ -1,0 +1,43 @@
+<div cdkDrag cdkDragRootElement=".cdk-overlay-pane">
+<h2 mat-dialog-title i18n="">Soll-Arbeitungsstand Einstellung
+  <mat-icon style="float:right; cursor: pointer;" (click)="close_dialog()">clear</mat-icon>
+</h2>
+<mat-card class="customMatCard">
+  <mat-card-content>
+    <h3 class="custom-h2">{{card_titel}}</h3>
+    <mat-checkbox class="custom-margin" *ngFor="let item of availableVehicles; let i=index"
+                  (click)="checkFunction(item)" [checked]="true" [disabled]="disabled">{{ item['name']}}
+    </mat-checkbox>
+  </mat-card-content>
+</mat-card>
+<mat-dialog-content class="mat-typography">
+  <div class="container">
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Datum" i18n="" [(ngModel)]="date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field style="margin-left: 15px;">
+      <input type="number" matInput placeholder="Soll-value" i18n="" [(ngModel)]="soll_value">
+    </mat-form-field>
+    <mat-icon matTooltip="Add" class="myEdit_icon" style="margin-left:15px;" (click)="add_sollValue()">add_box
+    </mat-icon>
+  </div>
+  <div class="errorBox" *ngIf="errors.length!==0">
+     <mat-list>
+       <mat-list-item  *ngFor="let err of errors">
+          <i class="material-icons" style="color:#cc0000;">indeterminate_check_box</i><span class="item">{{err}}</span>
+       </mat-list-item>
+     </mat-list>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button class="mat-raised-button" [mat-dialog-close]="true"  (click)="backend_synchro()" style="background-color: #1e5a99;color:#FFFFFF;" i18n="">
+    Speichern
+  </button>
+  <button class="mat-raised-button" mat-dialog-close style=" background-color: #1e5a99;color:#FFFFFF" i18n="">
+    Abbrechen
+  </button>
+</mat-dialog-actions>
+</div>

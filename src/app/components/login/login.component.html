@@ -1,0 +1,51 @@
+<mat-card>
+
+  <mat-card-content>
+    <div class="header">
+      <img src="assets/images/logo_white.png" width="250" alt="_logo">
+      <div class="title">STIBS<sup><small>2</small></sup></div>
+      <div class="subtitle">Control Center</div>
+    </div>
+  </mat-card-content>
+
+  <div>
+
+    <img class="mx-2 flag-icon" src="assets/flags/gb.svg" [ngClass]="{fopacity:matchCurrentLang('EN')}" (click)="setLanguage('EN')"/>
+    <img class="mx-2 flag-icon" src="assets/flags/de.svg" [ngClass]="{fopacity:matchCurrentLang('DE')}" (click)="setLanguage('DE')"/>
+
+    <h2 i18n>Anmeldedaten</h2>
+
+    <mat-divider></mat-divider>
+
+    <form [formGroup]="loginForm" (submit)="authenticate()">
+
+      <mat-form-field class="matFormField">
+        <input matInput placeholder="Benutzername" i18n-placeholder  i18n formControlName="identifier">
+      </mat-form-field>
+
+      <mat-form-field class="matFormField">
+
+        <input matInput #pwInput placeholder="Passwort" type="password" i18n-placeholder formControlName="password">
+
+        <mat-icon *ngIf="pwInput.type === 'password'" matSuffix (click)="pwInput.type = 'text'"    >visibility</mat-icon>
+        <mat-icon *ngIf="pwInput.type === 'text'"     matSuffix (click)="pwInput.type = 'password'">visibility_off</mat-icon>
+
+      </mat-form-field><br/>
+
+      <button mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid">Login</button>
+
+    </form>
+
+    <div *ngIf="is_inProcess" class="login-active">
+      <mat-progress-bar mode="query"></mat-progress-bar>
+      <span i18n>bitte haben Sie Geduld</span>
+    </div>
+
+    <div *ngIf="login_error" class="login-error">
+      <div i18n>Ihr Login ist leider fehlgeschlagen. Bitte überprüfen Sie Ihre Angaben und versuchen Sie es erneut.</div>
+      <strong><a [routerLink]="['/reset']" i18n>Login-Daten vergessen</a></strong>
+    </div>
+
+  </div>
+
+</mat-card>

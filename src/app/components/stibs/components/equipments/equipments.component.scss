@@ -1,0 +1,33 @@
+:host {
+  
+  display: block;
+  padding: 2em;
+
+  .name-cell, .number-cell, .interval-cell, .accuracy-cell, .user-cell {
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
+.dialog-content{
+  font-size: 14px;
+}
+
+@media (max-width: 1000px) {
+
+  .interval-cell {
+    display: none;
+  }
+
+}
+
+@media (max-width: 1125px) {
+
+  .number-cell, .accuracy-cell {
+    display: none;
+  }
+
+}

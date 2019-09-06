@@ -1,0 +1,78 @@
+= GUI Dokumentation für STIBS2CC import & zip Data Component
+
+// asciidoc settings for DE (German)
+// ==================================
+// toc-title definition MUST follow document title without blank line!
+:toc-title: Inhaltsverzeichnis
+
+// enable table-of-contents
+:toc:
+:sectanchors:
+:sectnums:
+
+:caution-caption: Achtung
+:important-caption: Wichtig
+:note-caption: Hinweis
+:tip-caption: Tip
+:warning-caption: Warnung
+
+:appendix-caption: Anhang
+:example-caption: Beispiel
+:figure-caption: Abbildung
+:table-caption: Tabelle
+
+// where are images located?
+:imagesdir: ./adoc
+
+
+[[section-introduction-and-goals]]
+==	Einführung und Ziele
+Hier sollte Je nach Fahrzeug, die entsprechende Daten importiert und als Zip Data in Backend gespeichert.
+
+.Initial Übersicht
+image::pic1.png[]
+
+.Fahrzeug Daten importieren
+image::pic2.png[]
+
+.Fahrzeug Daten zippen
+image::pic3.png[]
+
+
+=== Aufgabenstellung
+...
+
+
+=== External interfaces
+
+.Server Anfragen
+[width="80%",options="header",cols="1,1,2,4a"]
+|=======
+|Anfrage  | Typ | Parameter |erwartete Antwort 
+|zipVehicleData | post    | {   project: '',
+                                description: {},
+                                vehicle: {},
+                                 parameter: {},
+                                 scaling: {},
+                                 submodule: {}
+                              };
+|
+Boolean
+
+- true: Prozess erfolgreich durchgeführt
+- false: Error
+|=======
+
+
+=== Beispiel Parameter für eine Server-Anfrage
+
+{
+    project: "FLIRT3 BW1 EMU5",
+    description: {id: 5, version: "1.5", history: "Änderungshistorie", sub_title: "Stuttgarter Netz1 (BW1)", stap_logo: "STADLER.jpg", …},
+    vehicle: {id: 1234, name: "1429 123", number: "123", type: "1501"},
+    parameter: {content: "Fahrzeugkennung", signal: "FZG.uiFzg_Kennung", source1: "FLG_A", source2: "FLG_B"},
+    scaling: {name: "mA", factor: "1/1500"},
+    submodule: {id: 12334, path: "PP_350_1", path_description: "PP_350_1_Tueren", path_node_id: "abcdef", path_version: "1.3", …}
+
+}
+

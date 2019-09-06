@@ -1,0 +1,1151 @@
+   <?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="de" datatype="plaintext" original="ng2.template" target-language="en">
+    <body>
+      <trans-unit id="3768c7946fac6032d402311481ec6dd13788cccc" datatype="html">
+        <source>Anmeldedaten</source><target state="translated">Login</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/login/login.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7dc6c96ef237eb87de4d5a542abbf05d10031425" datatype="html">
+        <source>Benutzername</source><target state="translated">Username</target>
+
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/login/login.component.html</context><context context-type="linenumber">23</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/dialog/user-dialog/user-dialog.component.html</context><context context-type="linenumber">23</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/user-administration/user-administration.component.html</context><context context-type="linenumber">44</context></context-group></trans-unit>
+      <trans-unit id="2070ebb54f893c60114f49f46d7e1a6f27b66610" datatype="html">
+        <source>Passwort</source><target state="translated">Password</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/login/login.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/reset/reset.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit><trans-unit id="81cecb44cd45685d3b07e34fe03be993082ce51c" datatype="html">
+        <source>bitte haben Sie Geduld</source><target state="translated">please be patient</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/login/login.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="ed963c8f49fa3b434f1b8e4652af610fcde9077e" datatype="html">
+        <source>Ihr Login ist leider fehlgeschlagen. Bitte überprüfen Sie Ihre Angaben und versuchen Sie es erneut.</source><target state="translated">Your Login has failed. Please check your credentials and try again.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/login/login.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4c814897f038ed1a18b068e674b67556f30cea2d" datatype="html">
+        <source>Login-Daten vergessen</source><target state="translated">Forgot credentials</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/login/login.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="34557152cff7bc7db72a2a8706794d7fba4bac86" datatype="html">
+        <source>Reset Password</source><target state="translated">Reset Password</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/reset/reset.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1efddf2878fbb4ed13cf65e363348a5b75eba5a3" datatype="html">
+        <source>Wdh. Passwort</source><target state="translated">Password confirmation</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/reset/reset.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a785e75e0bdbc990597371fbf6f939a03a11dd3f" datatype="html">
+        <source>Your will receive a confirm mail soon! Please login with your new credentials.</source><target state="translated">Your will receive a confirm mail soon! Please login with your new credentials.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/reset/reset.component.html</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6765b4c916060f6bc42d9bb69e80377dbcb5e4e9" datatype="html">
+        <source>Login</source><target state="translated">Login</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/reset/reset.component.html</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit><trans-unit id="74eeedbbdc318eead9ff6a264b9634a2f60a68ff" datatype="html">
+        <source>Minute(n)</source><target state="translated">minute(s)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/stibs.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3254af9acb61fe6a3c6577be47bbe5c382890ce1" datatype="html">
+        <source>Einstellungen</source><target state="translated">Settings</target>
+
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/stibs.component.html</context><context context-type="linenumber">36</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/adjustment/adjustment.component.html</context><context context-type="linenumber">2</context></context-group></trans-unit><trans-unit id="6c80e465ddb54ece7d4a349bce19e786060ae780" datatype="html">
+        <source>Ausloggen</source><target state="translated">logout</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/stibs.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="f65253954b66e929a8b4d5ecaf61f9129f8cec64" datatype="html">
+        <source>Dashboard</source><target state="translated">Dashboard</target>
+
+
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/stibs.component.html</context><context context-type="linenumber">53</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/dashboard/dashboard.component.html</context><context context-type="linenumber">2</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/adjustment/adjustment.component.html</context><context context-type="linenumber">30</context></context-group></trans-unit><trans-unit id="75b115449a84519f810fcf0a457b52f1c832bdf4" datatype="html">
+        <source>Auswertung</source><target state="translated">Reporting</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/stibs.component.html</context><context context-type="linenumber">61</context></context-group></trans-unit>
+      <trans-unit id="d0a0703d1d003b934f007225e774bb43f9f3c6f7" datatype="html">
+        <source>Prüfrechner</source><target state="translated">Workstations</target>
+
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/stibs.component.html</context><context context-type="linenumber">67</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/test-unit/test-unit.component.html</context><context context-type="linenumber">2</context></context-group></trans-unit>
+      <trans-unit id="be2b16745ad5086342402ab9405301db8313203e" datatype="html">
+        <source>Mängelliste</source><target state="translated">List of defects</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/stibs.component.html</context><context context-type="linenumber">71</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/deficiencies/deficiencies.component.html</context><context context-type="linenumber">2</context></context-group></trans-unit><trans-unit id="db70eb40938e238ef31e95886aed1dd90d4ce242" datatype="html">
+        <source>Prüfmittelliste</source><target state="translated">List of equipments</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/stibs.component.html</context>
+          <context context-type="linenumber">75</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/equipments/equipments.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="119b64c7ddeeee3919c2a22563e2af2a63895f34" datatype="html">
+        <source>Prüfmittel</source><target state="translated"/>
+
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/dialog/equipment-dialog/equipment-dialog.component.html</context><context context-type="linenumber">2</context></context-group></trans-unit>
+      <trans-unit id="684073dc6e255ae34ebc2a39048ad6820ac8256a" datatype="html">
+        <source>Prüfkommentare</source><target state="translated">Comments</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/stibs.component.html</context><context context-type="linenumber">79</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/comments/comments.component.html</context><context context-type="linenumber">2</context></context-group></trans-unit>
+      <trans-unit id="24968c3b9f7cb940df7e5bf46f61a11710481829" datatype="html">
+        <source>Reports</source><target state="translated">Reports</target>
+
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/stibs.component.html</context><context context-type="linenumber">83</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/report-management/report-management.component.html</context><context context-type="linenumber">2</context></context-group></trans-unit>
+      <trans-unit id="8207a5a19f950cef735575b4ca10827334e93174" datatype="html">
+        <source>Archivierung</source><target state="translated">Archiving</target>
+
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/archival/archival.component.html</context><context context-type="linenumber">2</context></context-group></trans-unit>
+      <trans-unit id="27d0bf61d819b704c61c6214519017e4d478ff99" datatype="html">
+        <source>Verwaltung</source><target state="translated">Management</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/stibs.component.html</context><context context-type="linenumber">93</context></context-group></trans-unit>
+      <trans-unit id="74841277c59b6fc77a797d12a913401d8e74a266" datatype="html">
+        <source>Prüfkonfigurationen</source><target state="translated">Check configuration</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/stibs.component.html</context><context context-type="linenumber">99</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/config/config.component.html</context><context context-type="linenumber">2</context></context-group></trans-unit>
+      <trans-unit id="48d60462bdaf15069764397156192ece9f4dc492" datatype="html">
+        <source>Benutzerverwaltung</source><target state="translated">User-administration</target>
+
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/stibs.component.html</context><context context-type="linenumber">103</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/user-administration/user-administration.component.html</context><context context-type="linenumber">3</context></context-group></trans-unit>
+
+      <trans-unit id="debf8cf48256de3971d4244435864b5b57b2be94" datatype="html">
+        <source>Import (Fahrzeug)</source><target state="translated">Import (vehicle)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/import/import.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit><trans-unit id="1fc812ee04305d416361a2edffcc1eb56b56be5e" datatype="html">
+        <source>Zip Upload</source><target state="translated">Zip Upload</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/import/import.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit><trans-unit id="1af33328f5184c3750a93120814644c10c9a7c6f" datatype="html">
+        <source>Upload Zip-Datei</source><target state="translated">Upload Zip-Datei</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/import/import.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit><trans-unit id="e3422ce81feea897cd11e14f037641dddbc2570e" datatype="html">
+        <source>Zip Prozess Erfolgreich</source><target state="translated">Zip Process has completed successfully </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/import/import.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit><trans-unit id="4e69c2fddd7b8dcf974680e85627847ec04d0e2f" datatype="html">
+        <source>Benutzer</source><target state="translated"/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/dialog/user-dialog/user-dialog.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="9b06781868bb2af4810e2334cc9bc4851a6ffcaa" datatype="html">
+        <source>
+  <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>Benutzer : <x id="INTERPOLATION" equiv-text="{{  user_name }}"/> <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/>wurde gelöscht<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>
+</source><target state="translated">
+  <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>User : <x id="INTERPOLATION" equiv-text="{{  user_name }}"/> <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/>has been deleted<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>
+</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/snackbar/snackdeleteuser/snackdeleteuser.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+
+
+
+      <trans-unit id="e7e6aaef242d63860cfe94de487f60ba9b651490" datatype="html">
+        <source>bearbeiten</source><target state="translated">Edit</target>
+
+
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/dialog/user-dialog/user-dialog.component.html</context><context context-type="linenumber">3</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/dialog/equipment-dialog/equipment-dialog.component.html</context><context context-type="linenumber">3</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/equipments/equipments.component.html</context><context context-type="linenumber">61</context></context-group></trans-unit>
+      <trans-unit id="f88b3cc01c3df89f57713af63dcb88ef7eccaa1d" datatype="html">
+        <source>erstellen</source><target state="translated">Add</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/dialog/user-dialog/user-dialog.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/dialog/equipment-dialog/equipment-dialog.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d6507e7b5ae51f1734f3e169ef4cf6ef56f0001f" datatype="html">
+        <source>Vorname</source><target state="translated">First name</target>
+
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/dialog/user-dialog/user-dialog.component.html</context><context context-type="linenumber">15</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/user-administration/user-administration.component.html</context><context context-type="linenumber">28</context></context-group></trans-unit>
+      <trans-unit id="074a550816cde9894e6c6d3bafcbc7be199f059b" datatype="html">
+        <source>Nachname</source><target state="translated">Last name</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/dialog/user-dialog/user-dialog.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="244aae9346da82b0922506c2d2581373a15641cc" datatype="html">
+        <source>Email</source><target state="translated">Email</target>
+
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/dialog/user-dialog/user-dialog.component.html</context><context context-type="linenumber">27</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/user-administration/user-administration.component.html</context><context context-type="linenumber">52</context></context-group></trans-unit>
+      <trans-unit id="adf941c66d6551498d10d994ace9effe21a36d53" datatype="html">
+        <source>Abteilung</source><target state="translated">Department</target>
+
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/dialog/user-dialog/user-dialog.component.html</context><context context-type="linenumber">31</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/user-administration/user-administration.component.html</context><context context-type="linenumber">60</context></context-group></trans-unit><trans-unit id="f3ca9d6e09be7d0cd050f8d17c8711d9f3a30795" datatype="html">
+        <source>Rolle</source><target state="translated">Role</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/dialog/user-dialog/user-dialog.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/user-administration/user-administration.component.html</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+      </trans-unit>
+
+
+
+
+      <trans-unit id="05d6def11b80c405276ad18c4fc5183e8cea4f75" datatype="html">
+        <source>Speichern</source><target state="translated">Save</target>
+
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/dialog/user-dialog/user-dialog.component.html</context><context context-type="linenumber">54</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/dialog/equipment-dialog/equipment-dialog.component.html</context><context context-type="linenumber">62</context></context-group></trans-unit>
+      <trans-unit id="5ca707824ab93066c7d9b44e1b8bf216725c2c22" datatype="html">
+        <source>Filter</source><target state="translated">Filter</target>
+
+
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/user-administration/user-administration.component.html</context><context context-type="linenumber">12</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/comments/comments.component.html</context><context context-type="linenumber">13</context></context-group></trans-unit>
+      <trans-unit id="db68aa1ac264521506b1b60b59845459ccbcb8b7" datatype="html">
+        <source>neuer Benutzer anlegen</source><target state="translated">Add new user</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/user-administration/user-administration.component.html</context><context context-type="linenumber">16</context></context-group></trans-unit>
+      <trans-unit id="cff1428d10d59d14e45edec3c735a27b5482db59" datatype="html">
+        <source>Name</source><target state="translated">Name</target>
+
+
+
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/user-administration/user-administration.component.html</context><context context-type="linenumber">36</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/report-management/report-management.component.html</context><context context-type="linenumber">38</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/dialog/assignproject/assignproject.component.html</context><context context-type="linenumber">36</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/config/config.component.html</context><context context-type="linenumber">36</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/config/config.component.html</context><context context-type="linenumber">134</context></context-group></trans-unit>
+      <trans-unit id="c08ad7c89db46b0fc433db58d68ee336b16b132d" datatype="html">
+        <source>Signature</source><target state="translated">Signature</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/user-administration/user-administration.component.html</context><context context-type="linenumber">68</context></context-group></trans-unit>
+      <trans-unit id="03b870eddca16101be4dccda9cbfc79cccab94f2" datatype="html">
+        <source>Bearbeiten</source><target state="translated">Edit</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/user-administration/user-administration.component.html</context><context context-type="linenumber">92</context></context-group></trans-unit>
+      <trans-unit id="257c058d23f79021e1a2c6b966e89a3c32143864" datatype="html">
+        <source>Passwort zurücksetzen</source><target state="translated">reset Password</target>
+
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/user-administration/user-administration.component.html</context><context context-type="linenumber">102</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/user-administration/user-administration.component.html</context><context context-type="linenumber">136</context></context-group></trans-unit>
+      <trans-unit id="a813fd43c9a1b211fe541045d263d2c500c80f0f" datatype="html">
+        <source>Löschen</source><target state="translated">Delete</target>
+
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/user-administration/user-administration.component.html</context><context context-type="linenumber">113</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/user-administration/user-administration.component.html</context><context context-type="linenumber">116</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/config/config.component.html</context><context context-type="linenumber">68</context></context-group></trans-unit>
+      <trans-unit id="a34b9f005821af516d3b9fea1d52817093bd0c57" datatype="html">
+        <source>Möchten Sie wirklich das Passwort für den Benutzer <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b>"/><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i>"/><x id="INTERPOLATION" equiv-text="{{user.username}}"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i>"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/> zurücksetzen?</source><target state="translated">Are you sure you want to reset the password for the user <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b>"/><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i>"/><x id="INTERPOLATION" equiv-text="{{user.username}}"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i>"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/>?</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/user-administration/user-administration.component.html</context><context context-type="linenumber">142</context></context-group></trans-unit>
+      <trans-unit id="d01b841df58758ef8baf6c7870b06a5b8fdde40f" datatype="html">
+        <source>Nein</source><target state="translated">No</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/user-administration/user-administration.component.html</context><context context-type="linenumber">71</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/user-administration/user-administration.component.html</context><context context-type="linenumber">145</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/user-administration/user-administration.component.html</context><context context-type="linenumber">163</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/config/config.component.html</context><context context-type="linenumber">168</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/config/config.component.html</context><context context-type="linenumber">186</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/config/config.component.html</context><context context-type="linenumber">204</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/equipments/equipments.component.html</context><context context-type="linenumber">108</context></context-group></trans-unit><trans-unit id="ca2283fc765b9f44b69f0175d685dc2443da6011" datatype="html">
+        <source>Administrator</source><target state="translated">Admin</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/dialog/user-dialog/user-dialog.component.html</context><context context-type="linenumber">36</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/user-administration/user-administration.component.html</context><context context-type="linenumber">80</context></context-group></trans-unit><trans-unit id="c951a0da8aea04d53cc41839d9397b3573bb7928" datatype="html">
+        <source>Teamleiter</source><target state="translated">Team</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/dialog/user-dialog/user-dialog.component.html</context><context context-type="linenumber">37</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/user-administration/user-administration.component.html</context><context context-type="linenumber">81</context></context-group></trans-unit><trans-unit id="71715109a5cd610b74d7281b8ec0495d4741122c" datatype="html">
+        <source>Inbetriebsetzung</source><target state="translated">Commissioning</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/dialog/user-dialog/user-dialog.component.html</context><context context-type="linenumber">38</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/user-administration/user-administration.component.html</context><context context-type="linenumber">82</context></context-group></trans-unit><trans-unit id="65e1acdbb44b5a58f0daca61c584c5fe0c0a2c95" datatype="html">
+        <source>Produktion</source><target state="translated">Production</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/dialog/user-dialog/user-dialog.component.html</context><context context-type="linenumber">39</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/user-administration/user-administration.component.html</context><context context-type="linenumber">83</context></context-group></trans-unit>
+      <trans-unit id="a77ed7ae4b057db62ba2200a71c41181e366c35c" datatype="html">
+        <source>Ja</source><target state="translated">Yes</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/user-administration/user-administration.component.html</context><context context-type="linenumber">70</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/user-administration/user-administration.component.html</context><context context-type="linenumber">146</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/user-administration/user-administration.component.html</context><context context-type="linenumber">164</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/config/config.component.html</context><context context-type="linenumber">169</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/config/config.component.html</context><context context-type="linenumber">187</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/config/config.component.html</context><context context-type="linenumber">205</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/equipments/equipments.component.html</context><context context-type="linenumber">109</context></context-group></trans-unit><trans-unit id="1b8f5d7e06d5814f63ff431133e3017a875fdb0e" datatype="html">
+        <source>Benutzer löschen</source><target state="translated">Delete user</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/user-administration/user-administration.component.html</context><context context-type="linenumber">154</context></context-group></trans-unit><trans-unit id="546abe746861a2e1bf3852418b7307696b391691" datatype="html">
+        <source>Möchten Sie wirklich den Benutzer <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b>"/><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i>"/><x id="INTERPOLATION" equiv-text="{{user.username}}"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i>"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/> löschen?</source><target state="translated">Do you really want to delete the user<x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b>"/><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i>"/><x id="INTERPOLATION" equiv-text="{{user.username}}"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i>"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/>?</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/user-administration/user-administration.component.html</context><context context-type="linenumber">160</context></context-group></trans-unit><trans-unit id="3672620202dab60aa55b7633aab0adf2fff79379" datatype="html">
+        <source>Mehr Informationen</source><target state="translated">More infos</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/deficiencies/deficiencies.component.html</context><context context-type="linenumber">98</context></context-group></trans-unit>
+
+      <trans-unit id="36e1495187c6588a4543fda159474b7fd1314a47" datatype="html">
+        <source>Erstell-Datum:</source><target state="translated">Creation-Date:</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/deficiencies/deficiencies.component.html</context><context context-type="linenumber">107</context></context-group></trans-unit>
+      <trans-unit id="8fd611415c6dfeb43666627358076a918394c850" datatype="html">
+        <source>Ersteller:</source><target state="translated">Author:</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/deficiencies/deficiencies.component.html</context><context context-type="linenumber">108</context></context-group></trans-unit>
+      <trans-unit id="408c8ea61fdf629de48b98d3de7cc06fc387697f" datatype="html">
+        <source>Fahrzeug:</source><target state="translated">Vehicle:</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/deficiencies/deficiencies.component.html</context><context context-type="linenumber">109</context></context-group></trans-unit>
+      <trans-unit id="3c067fcbba5ff9156e225631757be4b3e0b44c15" datatype="html">
+        <source>Fehlerbeschreibung:</source><target state="translated">Error description:</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/deficiencies/deficiencies.component.html</context><context context-type="linenumber">110</context></context-group></trans-unit>
+      <trans-unit id="73fbd93cd8ee8f5f94955445c5088ffe4731a737" datatype="html">
+        <source>Von:</source><target state="translated">By:</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/deficiencies/deficiencies.component.html</context><context context-type="linenumber">111</context></context-group></trans-unit>
+      <trans-unit id="1922d9758251da69dd56aa25d59d67741056e357" datatype="html">
+        <source>Ort:</source><target state="translated">Location:</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/deficiencies/deficiencies.component.html</context><context context-type="linenumber">112</context></context-group></trans-unit>
+      <trans-unit id="cef5585c81dcf1a030104b24ec110e7d6a00ffac" datatype="html">
+        <source>Zuständige:</source><target state="translated">Competent:</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/deficiencies/deficiencies.component.html</context><context context-type="linenumber">118</context></context-group></trans-unit>
+      <trans-unit id="5b64171157742209058bbcc36b2840aa538476e8" datatype="html">
+        <source>Änderungs-Datum:</source><target state="translated">Modify-Date:</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/deficiencies/deficiencies.component.html</context><context context-type="linenumber">119</context></context-group></trans-unit>
+      <trans-unit id="0d7f143bdf134cf8a34c7ca43ea3b6afc64644c7" datatype="html">
+        <source>Status:</source><target state="translated">Status:</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/deficiencies/deficiencies.component.html</context><context context-type="linenumber">120</context></context-group></trans-unit>
+      <trans-unit id="520428ab4bd4dbcc91a4cabfa3106042e8185c1d" datatype="html">
+        <source>Ziel-Nummer:</source><target state="translated">target-Number:</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/deficiencies/deficiencies.component.html</context><context context-type="linenumber">126</context></context-group></trans-unit>
+      <trans-unit id="c5352e04fed089fcc8789d14218b34fac0419be3" datatype="html">
+        <source>Kommentar:</source><target state="translated">Comment:</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/deficiencies/deficiencies.component.html</context><context context-type="linenumber">127</context></context-group></trans-unit><trans-unit id="c77f12ea3b67c2b368ea0d4cc2125c6f9bb4e9c3" datatype="html">
+        <source>Zugteil:</source><target state="tranlated">Trainpart</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/deficiencies/deficiencies.component.html</context><context context-type="linenumber">128</context></context-group></trans-unit><trans-unit id="8bdd5eae86fa954f0ac6aa8a929bdec9e54760bc" datatype="html">
+        <source>Typ:</source><target state="translated">Type:</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/deficiencies/deficiencies.component.html</context><context context-type="linenumber">129</context></context-group></trans-unit><trans-unit id="8872c80f22339cd3b1b9f8219dfc41aa38bc21f4" datatype="html">
+        <source>Bauteil:</source><target state="translated">Unit:</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/deficiencies/deficiencies.component.html</context><context context-type="linenumber">130</context></context-group></trans-unit><trans-unit id="6d5f5c3d33f3b193a16ba333c6260919b5b12718" datatype="html">
+        <source>Fehlerbehebung Stadler [h]:</source><target state="translated">TimeFix1:</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/deficiencies/deficiencies.component.html</context><context context-type="linenumber">136</context></context-group></trans-unit><trans-unit id="125214063e1be8db80398969b4b7f1f1b267ce10" datatype="html">
+        <source>Fehlerbehebung andere [h]:</source><target state="translated">TimeFix2:</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/deficiencies/deficiencies.component.html</context><context context-type="linenumber">137</context></context-group></trans-unit><trans-unit id="2d0831b1c91fecf0cb837d5692b16d5f06b192d7" datatype="html">
+        <source>Fehlersuche[h]:</source><target state="translated">TimeSearch:</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/deficiencies/deficiencies.component.html</context><context context-type="linenumber">138</context></context-group></trans-unit><trans-unit id="4bbf2669b05daa9114596467ade035b3e1949469" datatype="html">
+        <source>Übersicht der Mängel für Projekte und Fahrzeuge</source><target state="translated">Defects list for projects and vehicles</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/deficiencies/deficiencies.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+
+
+
+
+
+
+
+
+      <trans-unit id="a2f14a73f7a6e94479f67423cc51102da8d6f524" datatype="html">
+        <source>None</source><target state="translated">None</target>
+
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/deficiencies/deficiencies.component.html</context><context context-type="linenumber">12</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/deficiencies/deficiencies.component.html</context><context context-type="linenumber">19</context></context-group></trans-unit>
+      <trans-unit id="8d0b5693c84245017844b0398ed04c1dc4495dc3" datatype="html">
+        <source>Projekt</source><target state="translated">Project</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/deficiencies/deficiencies.component.html</context><context context-type="linenumber">11</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/dashboard/dashboard.component.html</context><context context-type="linenumber">7</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/report-management/report-management.component.html</context><context context-type="linenumber">7</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/comments/comments.component.html</context><context context-type="linenumber">35</context></context-group></trans-unit>
+      <trans-unit id="bd4195e003834d5d55c3efee43a68699f0bb2306" datatype="html">
+        <source>Fahrzeug</source><target state="translated">Vehicle</target>
+
+
+
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/deficiencies/deficiencies.component.html</context><context context-type="linenumber">18</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/deficiencies/deficiencies.component.html</context><context context-type="linenumber">44</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/dashboard/dashboard.component.html</context><context context-type="linenumber">13</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/report-management/report-management.component.html</context><context context-type="linenumber">13</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/bar-chart/bar-chart.component.html</context><context context-type="linenumber">10</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/test-unit/test-unit.component.html</context><context context-type="linenumber">31</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/comments/comments.component.html</context><context context-type="linenumber">40</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/config/config.component.html</context><context context-type="linenumber">130</context></context-group></trans-unit><trans-unit id="cec6f9db1a8a86e4836be83aef2f434ab3a0b0a6" datatype="html">
+        <source>erledigt</source><target state="translated">done</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/deficiencies/deficiencies.component.html</context><context context-type="linenumber">30</context></context-group></trans-unit>
+      <trans-unit id="1470eabded471793a7ef2271e2a1dc30a1a3265f" datatype="html">
+        <source>Datum</source><target state="translated">Date</target>
+
+
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/deficiencies/deficiencies.component.html</context><context context-type="linenumber">38</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/comments/comments.component.html</context><context context-type="linenumber">24</context></context-group></trans-unit>
+      <trans-unit id="dc7d5e7737a5aae56d8e0fe68ed01a3ba998cb14" datatype="html">
+        <source>Ersteller</source><target state="translated">Author</target>
+
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/deficiencies/deficiencies.component.html</context><context context-type="linenumber">50</context></context-group></trans-unit>
+      <trans-unit id="21c7f50a98ed6ee10bbea74803213979b9c6cb66" datatype="html">
+        <source>Ort</source><target state="translated">Location</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/deficiencies/deficiencies.component.html</context><context context-type="linenumber">56</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/dialog/equipment-dialog/equipment-dialog.component.html</context><context context-type="linenumber">36</context></context-group></trans-unit>
+      <trans-unit id="a205040e3d420ade2e3ad5376b537d2fa0d9db68" datatype="html">
+        <source>Zuständige</source><target state="translated">Competent</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/deficiencies/deficiencies.component.html</context><context context-type="linenumber">62</context></context-group></trans-unit>
+      <trans-unit id="7c9b61bf89d784d6fd0f4552dc332965fc3d2632" datatype="html">
+        <source>Fehlerbeschreibung</source><target state="translated">Error description</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/deficiencies/deficiencies.component.html</context><context context-type="linenumber">68</context></context-group></trans-unit>
+      <trans-unit id="81b97b8ea996ad1e4f9fca8415021850214884b1" datatype="html">
+        <source>Status</source><target state="translated">Status</target>
+
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/deficiencies/deficiencies.component.html</context><context context-type="linenumber">74</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/config/config.component.html</context><context context-type="linenumber">47</context></context-group></trans-unit>
+      <trans-unit id="0e2fbea444829573b8aaf5d01869f405b05bd74d" datatype="html">
+        <source>mehr...</source><target state="translated">more...</target>
+
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/deficiencies/deficiencies.component.html</context><context context-type="linenumber">81</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/equipments/equipments.component.html</context><context context-type="linenumber">79</context></context-group></trans-unit>
+      <trans-unit id="ff5488754e4787f1d750f1718e5271f3186d3298" datatype="html">
+        <source>
+  <x id="START_TAG_SECTION" ctype="x-section" equiv-text="&lt;section>"/>
+    <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/> Projekt : <x id="INTERPOLATION" equiv-text="{{ titel }}"/> ,<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/>erfolgreich archiviert<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>
+  <x id="CLOSE_TAG_SECTION" ctype="x-section" equiv-text="&lt;/section>"/>
+  <x id="START_TAG_SECTION_1" ctype="x-section" equiv-text="&lt;section>"/>
+    <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>Die Archiv-Datensicherung<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/>fehlgeschlagen<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>
+  <x id="CLOSE_TAG_SECTION" ctype="x-section" equiv-text="&lt;/section>"/>
+</source><target state="translated">
+  <x id="START_TAG_SECTION" ctype="x-section" equiv-text="&lt;section>"/>
+    <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/> Project : <x id="INTERPOLATION" equiv-text="{{ titel }}"/> ,<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/>successfully archived<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>
+  <x id="CLOSE_TAG_SECTION" ctype="x-section" equiv-text="&lt;/section>"/>
+  <x id="START_TAG_SECTION_1" ctype="x-section" equiv-text="&lt;section>"/>
+    <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>The archive backup<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/>fails<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>
+  <x id="CLOSE_TAG_SECTION" ctype="x-section" equiv-text="&lt;/section>"/>
+</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/snackbar/snackarchiv/snackarchiv.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cb72aee16f8227ef71037348114033622b7006e7" datatype="html">
+        <source> Projekt-Daten archivieren :</source><target state="translated"> Archive project data :</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/archival/archival.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="762fa49ee65d8fadc0ebcd488a051343d217ef61" datatype="html">
+        <source>
+      jetzt archivieren
+    </source><target state="translated">
+     archive now
+    </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/archival/archival.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c3a05716930ea8ed04e11aa62868faaf8bf00058" datatype="html">
+        <source>Archivierung läuft ...</source><target state="translated">Archiving is running ...</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/archival/archival.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f5f2d3a04bdf2cf2d21a5e8f248a365a0a35dc6b" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i>"/>...Archiv-Datensicherung fehlgeschlagen<x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i>"/></source><target state="translated"><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i>"/>...Archive backup failed<x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i>"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/archival/archival.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5de309d14189128fac6bd9335c703565b7eecacb" datatype="html">
+        <source>Timeout</source><target state="translated">Timeout</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/adjustment/adjustment.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="df30f46cfd1a4c3d429664df5445af05c3ad0efa" datatype="html">
+        <source>Timeout einstellen</source><target state="translated">Set timeout</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/adjustment/adjustment.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="327fba4b0fb360e78c85a469920411fd6bd358e4" datatype="html">
+        <source>Dashboard einstellen</source><target state="translated">Set dashboard</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/adjustment/adjustment.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b5fe4b4cba1aefe2ff719c36c457870cd6baa93e" datatype="html">
+        <source>Projektstatus</source><target state="translated">Project status</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/dashboard/dashboard.component.html</context><context context-type="linenumber">24</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/adjustment/adjustment.component.html</context><context context-type="linenumber">35</context></context-group></trans-unit>
+      <trans-unit id="34d4cba4c21d87f490ed1076d639234e0c1f3385" datatype="html">
+        <source>Fahrzeugstatus</source><target state="translated">Vehicle status</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/dashboard/dashboard.component.html</context><context context-type="linenumber">37</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/adjustment/adjustment.component.html</context><context context-type="linenumber">39</context></context-group></trans-unit>
+      <trans-unit id="27a56aad79d8b61269ed303f11664cc78bcc2522" datatype="html">
+        <source>Theme</source><target state="translated">Theme</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/adjustment/adjustment.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7a90993920d0e61b3e4a6eb3c3e9f9c698a55161" datatype="html">
+        <source>Use dark theme</source><target state="translated">Use dark theme</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/adjustment/adjustment.component.html</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ec3d6c70e8cf94094bdbe0c3073bc2cf0ae2059b" datatype="html">
+        <source>Protokollstatus</source><target state="translated">Protocol status</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/report-management/report-management.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit><trans-unit id="d8345bd9faed05ee758c645eea2e555d5e336f5e" datatype="html">
+        <source>Report Liste</source><target state="translated">Report list</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/report-management/report-management.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit><trans-unit id="f72992030f134408b675152c397f9d0ec00f3b2a" datatype="html">
+        <source>Report</source><target state="translated">Report</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/report-management/report-management.component.html</context><context context-type="linenumber">42</context></context-group></trans-unit><trans-unit id="18a8ca6b96d3bde5e4579cdb8d5d41936dc5fe1a" datatype="html">
+        <source>PA erstellen</source><target state="translated">check instruction</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/report-management/report-management.component.html</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit><trans-unit id="141425de6800fa78e75bf5c8270c8f0019c58435" datatype="html">
+        <source>Bericht erstellen</source><target state="translated">create report</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/report-management/report-management.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit><trans-unit id="dce461fa66cae0dcb13883d06889c9024c9ff7c3" datatype="html">
+        <source>Endbericht erstellen</source><target state="translated">create final report</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/report-management/report-management.component.html</context><context context-type="linenumber">60</context></context-group></trans-unit>
+
+
+
+
+
+
+
+      <trans-unit id="9e1870392bc66166eeb77fd8325efd9db34923aa" datatype="html">
+        <source>Berichte herunterladen</source><target state="translated">Download reports</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/report-management/report-management.component.html</context><context context-type="linenumber">74</context></context-group></trans-unit><trans-unit id="f593f6913ad1d108556e368d6dec9d518b661fb0" datatype="html">
+        <source>Kommentar für Bericht</source><target state="translated">Report's Comments</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/report-management/report-management.component.html</context><context context-type="linenumber">98</context></context-group></trans-unit>
+
+
+
+
+
+      <trans-unit id="5a0707eb0c2f470b099b5b1bb34ccbfa266908a4" datatype="html">
+        <source>Soll-Arbeitungsstand Einstellung
+  <x id="START_TAG_MAT-ICON" ctype="x-mat-icon" equiv-text="&lt;mat-icon>"/>clear<x id="CLOSE_TAG_MAT-ICON" ctype="x-mat-icon" equiv-text="&lt;/mat-icon>"/>
+</source><target state="translated">Setiing
+  <x id="START_TAG_MAT-ICON" ctype="x-mat-icon" equiv-text="&lt;mat-icon>"/>clear<x id="CLOSE_TAG_MAT-ICON" ctype="x-mat-icon" equiv-text="&lt;/mat-icon>"/>
+</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/dialog/settingvehicle/settingvehicle.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="7d23b0858bcdd8e1d9d7934e1234cb038617c4db" datatype="html">
+        <source>
+    Speichern
+  </source><target state="translated">
+    Save
+  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/dialog/settingvehicle/settingvehicle.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fa3c0573707de13a67ef249c31f2f5b8f458cd16" datatype="html">
+        <source>
+    Abbrechen
+  </source><target state="translated">
+    Cancel
+  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/dialog/settingvehicle/settingvehicle.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1c50983a9c1e72ab140044e18176f28265815455" datatype="html">
+        <source>
+  <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>Soll-Arbeitungsstand<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/>aktualisiert<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>
+</source><target state="translated">
+  <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>Work status<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/>updated<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>
+</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/snackbar/addsollvalue/addsollvalue.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6291a1e0b4edb12528d3f9dd866fead161d28ad5" datatype="html">
+        <source>
+  <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>Zeile<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/> erfolgreich bearbeitet<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>
+</source><target state="translated">
+  <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>Row<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/> successfully updated<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>
+</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/snackbar/editsollvalue/editsollvalue.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ece10c88e80840ed212ecb72f93886d7cec08301" datatype="html">
+        <source>
+  <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>Zeile<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/> erfolgreich gelöscht<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>
+</source><target state="translated">
+  <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>Row<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/> successfully deleted<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>
+</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/snackbar/deletesollvalue/deletesollvalue.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="caa6498450e39bac228e1533e74767f6b20f85b2" datatype="html">
+        <source>
+  <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>Benutzer : <x id="INTERPOLATION" equiv-text="{{ user_name }}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/> <x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/>erfolgreich bearbeitet<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>
+</source><target state="translated">
+  <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>User : <x id="INTERPOLATION" equiv-text="{{ user_name }}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/> <x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/>successfully updated<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>
+</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/snackbar/snackedituser/snackedituser.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="523f5374140acd74994d08376f5624ca7f458649" datatype="html">
+        <source>
+  <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>Neuer Benutzer : <x id="INTERPOLATION" equiv-text="{{  user_name }}"/> <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/>hinzugefügt<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>
+</source><target state="translated">
+  <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>New user : <x id="INTERPOLATION" equiv-text="{{  user_name }}"/> <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/>added<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>
+</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/snackbar/snackadduser/snackadduser.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit><trans-unit id="6f6236907259e3114a59bb7c3a6e8c53b244a46c" datatype="html">
+        <source> Termin(e) eingeben</source><target state="translated">set Date</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/dialog/settingdate/settingdate.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit><trans-unit id="a0840349f93e7b79edb3c7edbfa4a0fca2082cc7" datatype="html">
+        <source>Start Datum</source><target state="translated">Start Date</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/dialog/settingdate/settingdate.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit><trans-unit id="c94b660da9ba73b6d3f7834b375d5008ce040bd5" datatype="html">
+        <source>End Datum</source><target state="translated">End Date</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/dialog/settingdate/settingdate.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="254d5db0bd5c3d265698b2243cf55a6e7e6be2ae" datatype="html">
+        <source>speichern</source><target state="translated">save</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/dialog/settingdate/settingdate.component.html</context><context context-type="linenumber">22</context></context-group></trans-unit>
+      <trans-unit id="0c03d0c4ef2a754e7316f827936fb505d9837cd7" datatype="html">
+        <source>Abarbeitungsstand</source><target state="translated">Work status</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/line-chart/line-chart.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit><trans-unit id="596a5aad68250ca413cc28e45f190cc93254ee6a" datatype="html">
+        <source>Abarbeitung in %</source><target state="translated">Processing in % </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/line-chart/line-chart.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="0b2284447454d47d86a2f3be503c936725ed0f17" datatype="html">
+        <source>Tag(e)</source><target state="translated">day(s)</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/line-chart/line-chart.component.html</context><context context-type="linenumber">25</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/line-chart/line-chart.component.html</context><context context-type="linenumber">26</context></context-group></trans-unit>
+      <trans-unit id="792c4fa4e537595cbbd1f1aa2ca4e584c422eadf" datatype="html">
+        <source>verspätet</source><target state="translated">delayed</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/line-chart/line-chart.component.html</context><context context-type="linenumber">25</context></context-group></trans-unit><trans-unit id="7fcaddbd33a3264b2edb30d1853485df13d08943" datatype="html">
+        <source>übrig</source><target state="translated">left</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/line-chart/line-chart.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit><trans-unit id="b8edc02938673e08cae6edc4f5e76f4189bec6e4" datatype="html">
+        <source>im Zeitplan</source><target state="translated">on scheduled</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/line-chart/line-chart.component.html</context><context context-type="linenumber">28</context></context-group></trans-unit><trans-unit id="bc79db8a6f611d28858266e9583df4f1dc71a5bf" datatype="html">
+        <source>hinter Zeitplan</source><target state="translated">behind schedule</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/line-chart/line-chart.component.html</context><context context-type="linenumber">29</context></context-group></trans-unit>
+      <trans-unit id="8434d4a28744d7df82cd39ef8da4266fcbc40064" datatype="html">
+        <source>Start</source><target state="translated">Start</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/line-chart/line-chart.component.html</context><context context-type="linenumber">33</context></context-group></trans-unit>
+
+      <trans-unit id="0d481d2162a93eb6438cda94894310bd0527674f" datatype="html">
+        <source>Abgabe:</source><target state="translated">Delivery:</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/line-chart/line-chart.component.html</context><context context-type="linenumber">34</context></context-group></trans-unit><trans-unit id="c962831e4df91a0f497b6569cd0c6bd22dc2da8e" datatype="html">
+        <source>Termin bearbeiten</source><target state="translated">Edit Date</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/line-chart/line-chart.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="67716e8b3dac038b7f40a245ebbfff288360a7ef" datatype="html">
+        <source>Erfüllungsgrad zum <x id="INTERPOLATION" equiv-text="{{lastZeitpunkt  | date:'dd.MM.yyyy'}}"/>:</source><target state="translated">Degree of completion on <x id="INTERPOLATION" equiv-text="{{lastZeitpunkt  | date:'dd.MM.yyyy'}}"/>:</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/line-chart/line-chart.component.html</context><context context-type="linenumber">41</context></context-group></trans-unit>
+      <trans-unit id="f209a951f63367dcc1b879e19cae696b3659855c" datatype="html">
+        <source>Erfüllungsgrad aktuell:</source><target state="translated">Current Degree of completion:</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/line-chart/line-chart.component.html</context><context context-type="linenumber">42</context></context-group></trans-unit><trans-unit id="037e61341120791a432bc56a5e07d42c6416a758" datatype="html">
+        <source>freigeben </source><target state="translated">release </target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/line-chart/line-chart.component.html</context><context context-type="linenumber">51</context></context-group></trans-unit>
+      <trans-unit id="9623d6219caa79458e69af28de323144ee474c8b" datatype="html">
+        <source>abschliessen</source><target state="translated">lock</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/line-chart/line-chart.component.html</context><context context-type="linenumber">47</context></context-group></trans-unit>
+
+
+
+      <trans-unit id="b881d041cad1d088ee6d4ce23e30606b45dc54f5" datatype="html">
+        <source>
+  <x id="START_TAG_SECTION" ctype="x-section" equiv-text="&lt;section>"/>
+    <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/><x id="INTERPOLATION" equiv-text="{{ titel }}"/>, <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/>erfolgreich durchgeführt<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>
+  <x id="CLOSE_TAG_SECTION" ctype="x-section" equiv-text="&lt;/section>"/>
+  <x id="START_TAG_SECTION_1" ctype="x-section" equiv-text="&lt;section>"/>
+    <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/><x id="INTERPOLATION" equiv-text="{{ titel }}"/>, <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/>fehlgeschlagen<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>
+  <x id="CLOSE_TAG_SECTION" ctype="x-section" equiv-text="&lt;/section>"/>
+</source><target state="translated">
+  <x id="START_TAG_SECTION" ctype="x-section" equiv-text="&lt;section>"/>
+    <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/><x id="INTERPOLATION" equiv-text="{{ titel }}"/>, <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/>successfully performed<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>
+  <x id="CLOSE_TAG_SECTION" ctype="x-section" equiv-text="&lt;/section>"/>
+  <x id="START_TAG_SECTION_1" ctype="x-section" equiv-text="&lt;section>"/>
+    <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/><x id="INTERPOLATION" equiv-text="{{ titel }}"/>, <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/>failed<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>
+  <x id="CLOSE_TAG_SECTION" ctype="x-section" equiv-text="&lt;/section>"/>
+</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/snackbar/snack-general/snack-general.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="324b5a6beee0a7c1f0a74a8e2dd4a82bc2b97cc5" datatype="html">
+        <source>Projekt zuordnnen</source><target state="translated">Project assignment</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/dialog/assignproject/assignproject.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d58ebf88efce4044c8c7cfc0f87e8fbfe442dde0" datatype="html">
+        <source>Rechnername:</source><target state="translated">Computer name:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/dialog/assignproject/assignproject.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c9d61e5fb218be755700e852d66e6d93e86edd85" datatype="html">
+        <source> Speichern</source><target state="translated"> Save</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/dialog/assignproject/assignproject.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit><trans-unit id="44b12e0ae3e0f85a17c973d96a9f2edaea76e84c" datatype="html">
+        <source>Rechnername</source><target state="translated">Computer name</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/test-unit/test-unit.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit><trans-unit id="fbaaeb297e70b9a800acf841b9d26c19d60651ef" datatype="html">
+        <source>Alias</source><target state="translated">alias</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/test-unit/test-unit.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit><trans-unit id="129d383de417e894cc12edebd60a3603dfbe6b70" datatype="html">
+        <source>Softwareversion </source><target state="translated">Software version </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/test-unit/test-unit.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1b24932d0f2269e4b41d0f936fdb5de1b94da401" datatype="html">
+        <source>Abbrechen</source><target state="translated">Cancel</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/dialog/user-dialog/user-dialog.component.html</context><context context-type="linenumber">53</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/dialog/assignproject/assignproject.component.html</context><context context-type="linenumber">48</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/dialog/equipment-dialog/equipment-dialog.component.html</context><context context-type="linenumber">61</context></context-group></trans-unit>
+
+
+      <trans-unit id="ea506274c0b316c036e3c6426bf13aab4210b3d8" datatype="html">
+        <source>Projektversion</source><target state="translated">Project version</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/test-unit/test-unit.component.html</context><context context-type="linenumber">27</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/config/config.component.html</context><context context-type="linenumber">96</context></context-group></trans-unit>
+      <trans-unit id="d1dd0207e9e258b2c0fd49814b7ae694123457ea" datatype="html">
+        <source>Fahrzeugversion</source><target state="translated">Vehicle version</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/test-unit/test-unit.component.html</context><context context-type="linenumber">35</context></context-group></trans-unit>
+      <trans-unit id="1f0fcdc182a8fce6807eae9cf13e5f329f260702" datatype="html">
+        <source>Letzte Verbindung</source><target state="translated">Last connection</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/test-unit/test-unit.component.html</context><context context-type="linenumber">39</context></context-group></trans-unit>
+      <trans-unit id="62a1628d6354945b126be4153abf520e9cee6fc6" datatype="html">
+        <source>Node öffnen</source><target state="translated">Open node</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/test-unit/test-unit.component.html</context><context context-type="linenumber">46</context></context-group></trans-unit>
+      <trans-unit id="c979adc8630ac7e7577dc9c3edb4a85acb126a17" datatype="html">
+        <source>Projekt zuordnen</source><target state="translated">Project assignment</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/test-unit/test-unit.component.html</context><context context-type="linenumber">52</context></context-group></trans-unit><trans-unit id="dc44f12c5190af5b859450cd8c1fa3e3c554e89a" datatype="html">
+        <source>Rechner deaktivate</source><target state="translated">Disable computer</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/test-unit/test-unit.component.html</context><context context-type="linenumber">58</context></context-group></trans-unit><trans-unit id="75a8d68c65c0ff81ef00cac12475c740fc942b1b" datatype="html">
+        <source>Übersicht alle Kommentare bezüglich Projekte und Fahrzeuge</source><target state="translated">Overview of comments for projects and vehicles</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/comments/comments.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+
+
+      <trans-unit id="ccb97f0a9828fadf14388eb899443b52c12cfd9b" datatype="html">
+        <source>Kategorie</source><target state="translated">Category</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/comments/comments.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3bed5e7229e7286ff164e6cdf9ad61e0cdbcf814" datatype="html">
+        <source>Testfall</source><target state="translated">Testcase</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/comments/comments.component.html</context><context context-type="linenumber">46</context></context-group></trans-unit>
+      <trans-unit id="3a3356824bb85b9c792346cf70d13bd13c94ff74" datatype="html">
+        <source>Kommentar</source><target state="translated">Comment</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/report-management/report-management.component.html</context><context context-type="linenumber">105</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/comments/comments.component.html</context><context context-type="linenumber">52</context></context-group></trans-unit><trans-unit id="0cb9cde043e0622c036fc186e8752331ca61912f" datatype="html">
+        <source>Signatur Passwort</source><target state="translated">Signature password</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/report-management/report-management.component.html</context><context context-type="linenumber">108</context></context-group></trans-unit><trans-unit id="02781f01a57f009e7ca63bcedc89b2966c5e55e7" datatype="html">
+        <source>Erstellen</source><target state="translated">create</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/report-management/report-management.component.html</context><context context-type="linenumber">112</context></context-group></trans-unit>
+
+
+
+
+      <trans-unit id="141098be3f4493ec854519d6c049a1937b1c093c" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i>"/> bitte wählen Sie die Prufkonfiguration aus...<x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i>"/></source><target state="translated"><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i>"/> select the config file ...<x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i>"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/config/config.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit><trans-unit id="bd52b9f0037cafad2ec69691bd49dced5d81534a" datatype="html">
+        <source>Konfiguration hochladen</source><target state="translated">Upload configuration</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/config/config.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="79738609b8d20631f9c8382450fa3f055a6b2af1" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i>"/>...in Bearbeitung<x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i>"/></source><target state="translated"><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i>"/>...in processing<x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i>"/></target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/config/config.component.html</context><context context-type="linenumber">27</context></context-group></trans-unit><trans-unit id="6d0a291c0e44a8588140031f3a0b680f104bff24" datatype="html">
+        <source>Fortschritt</source><target state="translated">Progress</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/config/config.component.html</context><context context-type="linenumber">40</context></context-group></trans-unit><trans-unit id="b22dc439da3dbfc9c976c1b6f0d397dfb448eb2c" datatype="html">
+        <source>abgeschlossen</source><target state="translated">completed</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/config/config.component.html</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit><trans-unit id="2493b7d0a373b2010bc3555847474df1de425b02" datatype="html">
+        <source>warten</source><target state="translated">waiting</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/config/config.component.html</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="c43dc1967a603fefb886149ac35863a06d5b4ce5" datatype="html">
+        <source>Information</source><target state="translated">Information</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/config/config.component.html</context><context context-type="linenumber">59</context></context-group></trans-unit>
+      <trans-unit id="c8ac022dae267e926db44cb2a8481e1927af5f74" datatype="html">
+        <source>Project</source><target state="tranlated">Project</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/config/config.component.html</context><context context-type="linenumber">91</context></context-group></trans-unit>
+      <trans-unit id="8fe73a4787b8068b2ba61f54ab7e0f9af2ea1fc9" datatype="html">
+        <source>Version</source><target state="translated">Version</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/config/config.component.html</context><context context-type="linenumber">100</context></context-group></trans-unit><trans-unit id="81d696cdc37eb8ebefaa037a5972539942bccfd7" datatype="html">
+        <source>aktiv</source><target state="translated">active</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/config/config.component.html</context><context context-type="linenumber">51</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/config/config.component.html</context><context context-type="linenumber">107</context></context-group></trans-unit><trans-unit id="2ee6174aa7f9310386d3c06a3756fe4150a1b994" datatype="html">
+        <source>verzögert</source><target state="translated">delayed</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/config/config.component.html</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit><trans-unit id="54320d2996f17b6f434e81051e9cdf12d81b2731" datatype="html">
+        <source>fehlerhaft</source><target state="translated">failed</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/config/config.component.html</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+        <note priority="1" from="description">status Failed</note>
+      </trans-unit><trans-unit id="9f7e0a292de93c112481a51cb6f959242b3ff7d4" datatype="html">
+        <source>inaktiv</source><target state="translated">inactive</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/config/config.component.html</context><context context-type="linenumber">108</context></context-group></trans-unit>
+
+
+      <trans-unit id="d2a1228256c47b9ca9d2413b8c775dfcd302f92b" datatype="html">
+        <source>löschen</source><target state="translated">delete</target>
+
+
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/config/config.component.html</context><context context-type="linenumber">115</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/equipments/equipments.component.html</context><context context-type="linenumber">70</context></context-group></trans-unit><trans-unit id="08685fc86777450b009aeed4959b02bc80adf2aa" datatype="html">
+        <source>Nummer</source><target state="translated">Number</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/config/config.component.html</context><context context-type="linenumber">138</context></context-group></trans-unit>
+
+
+
+      <trans-unit id="ff7e537959a692938062ccc355b435270868c388" datatype="html">
+        <source>Projekt-Version löschen</source><target state="translated">Delete project version</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/config/config.component.html</context><context context-type="linenumber">159</context></context-group></trans-unit><trans-unit id="101d3498fdb39a7dd2f9d6373bb015f354017f54" datatype="html">
+        <source>Möchten Sie wirklich die Projektversion <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b>"/><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i>"/><x id="INTERPOLATION" equiv-text="{{projectItem.version}}"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i>"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/> löschen?</source><target state="translated">Do you really want to delete the project version<x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b>"/><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i>"/><x id="INTERPOLATION" equiv-text="{{projectItem.version}}"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i>"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/> ?</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/config/config.component.html</context><context context-type="linenumber">165</context></context-group></trans-unit><trans-unit id="07c3a7ba7b9a68ef77d5e5ed19562b8e847a9eb4" datatype="html">
+        <source>Fahrzeug löschen</source><target state="translated">Delete vehicle</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/config/config.component.html</context><context context-type="linenumber">177</context></context-group></trans-unit><trans-unit id="e1eec0f2a49feeb0c7b96747e3938b0a0d56fb37" datatype="html">
+        <source>Möchten Sie wirklich das Fahrzeug <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b>"/><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i>"/><x id="INTERPOLATION" equiv-text="{{vehicle.name}}"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i>"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/> löschen?</source><target state="translated">Do you really want to delete the vehicle <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b>"/><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i>"/><x id="INTERPOLATION" equiv-text="{{vehicle.name}}"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i>"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/> ?</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/config/config.component.html</context><context context-type="linenumber">183</context></context-group></trans-unit><trans-unit id="fe606fcead4cda38dd1b748a50d59e12db10629c" datatype="html">
+        <source>Prüf-Konfigurationen löschen</source><target state="translated"> Delete test configurations</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/config/config.component.html</context><context context-type="linenumber">195</context></context-group></trans-unit><trans-unit id="8c4da3295857e504a46804ea9db12d1f433b51b4" datatype="html">
+        <source>Möchten Sie wirklich die Konfiguration <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b>"/><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i>"/><x id="INTERPOLATION" equiv-text="{{jobTask.name}}"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i>"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/> löschen?</source><target state="tranlated">Do you really want to delete the configuration <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b>"/><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i>"/><x id="INTERPOLATION" equiv-text="{{jobTask.name}}"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i>"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/> ?</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/config/config.component.html</context><context context-type="linenumber">201</context></context-group></trans-unit>
+      <trans-unit id="46a68aee4ca47ca72a2e8e5e2a31df0cb9524e66" datatype="html">
+        <source>
+  <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>neues Fahrzeug : <x id="INTERPOLATION" equiv-text="{{vehicle_name}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/>hinzugefügt<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>
+</source><target state="translated">
+  <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>new vehicle : <x id="INTERPOLATION" equiv-text="{{vehicle_name}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/>added<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>
+</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/snackbar/snackaddvehicle/snackaddvehicle.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+
+
+
+
+
+
+      <trans-unit id="b4359c575f529584e9cca2fa7f089a52ce20ed53" datatype="html">
+        <source>hinzufügen</source><target state="translated">add</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/equipments/equipments.component.html</context><context context-type="linenumber">14</context></context-group></trans-unit><trans-unit id="8cf747d3f456fdb378084d6de9c4399ba3150a83" datatype="html">
+        <source>Nächste Kalibrierung wurde  am <x id="INTERPOLATION" equiv-text="{{ setDeadline(element.calibrationDate, element.interval) | date:'dd.MM.yyyy' }}"/> geplant</source><target state="translated">Next calibration scheduled on <x id="INTERPOLATION" equiv-text="{{ setDeadline(element.calibrationDate, element.interval) | date:'dd.MM.yyyy' }}"/> ! </target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/equipments/equipments.component.html</context><context context-type="linenumber">38</context></context-group></trans-unit>
+      <trans-unit id="ef623008673bd2f0a928de8947d89e195d4bb081" datatype="html">
+        <source>Bezeichnung</source><target state="translated">Name</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/dialog/equipment-dialog/equipment-dialog.component.html</context><context context-type="linenumber">15</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/equipments/equipments.component.html</context><context context-type="linenumber">23</context></context-group></trans-unit>
+      <trans-unit id="2594ab1668fc32646dabca51b6d9898b7972fc6c" datatype="html">
+        <source>Equipmentnummer</source><target state="translated">Equipmentnumber</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/dialog/equipment-dialog/equipment-dialog.component.html</context><context context-type="linenumber">32</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/equipments/equipments.component.html</context><context context-type="linenumber">27</context></context-group></trans-unit><trans-unit id="744f144b5c40b83a7038a1383138a0547122bdb3" datatype="html">
+        <source>Variante</source><target state="translated">Type</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/dialog/equipment-dialog/equipment-dialog.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit><trans-unit id="176c54aef40cc5cc0b2abf1d69d41458e1cf1047" datatype="html">
+        <source>Hersteller</source><target state="translated">Manufacturer</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/dialog/equipment-dialog/equipment-dialog.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cb2d53b6f17325400630845de6c1e75de0610af8" datatype="html">
+        <source>Kalibrierungsdatum</source><target state="translated">calibrationDate</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/dialog/equipment-dialog/equipment-dialog.component.html</context><context context-type="linenumber">22</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/equipments/equipments.component.html</context><context context-type="linenumber">31</context></context-group></trans-unit>
+      <trans-unit id="eee7e335c7d92c7777d96d935700521fd141310e" datatype="html">
+        <source>Kalibrierzyklus</source><target state="translated">Interval</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/dialog/equipment-dialog/equipment-dialog.component.html</context><context context-type="linenumber">28</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/equipments/equipments.component.html</context><context context-type="linenumber">45</context></context-group></trans-unit>
+      <trans-unit id="107b9ff6838c0b8f0a4659e655911ab3bcb2d90e" datatype="html">
+        <source>Einheit</source><target state="translated">accuracy</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/dialog/equipment-dialog/equipment-dialog.component.html</context><context context-type="linenumber">18</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/equipments/equipments.component.html</context><context context-type="linenumber">50</context></context-group></trans-unit>
+      <trans-unit id="d77be7b4064bb2b2aa2d399f7fa8b60346d0cfec" datatype="html">
+        <source>Besitzer</source><target state="translated">Owner</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/dialog/equipment-dialog/equipment-dialog.component.html</context><context context-type="linenumber">48</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/equipments/equipments.component.html</context><context context-type="linenumber">55</context></context-group></trans-unit><trans-unit id="f09ad66c1ebf16217ba1a1072be7a98de2d95eac" datatype="html">
+        <source>Beschreibung</source><target state="translated">Description</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/dialog/equipment-dialog/equipment-dialog.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit><trans-unit id="9d046e6a11dedf4849203f7ddf2bf7a5977cfa2b" datatype="html">
+        <source>Prüfmittel löschen</source><target state="translated">Delete Equipment</target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/equipments/equipments.component.html</context><context context-type="linenumber">99</context></context-group></trans-unit><trans-unit id="69987a26c381fbb9db1a465789f93cd2fa6b2010" datatype="html">
+        <source>Möchten Sie wirklich das Prüfmittel <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b>"/><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i>"/><x id="INTERPOLATION" equiv-text="{{equipment.name}}"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i>"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/> löschen?</source><target state="translated">Do you really want to delete the equipment<x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b>"/><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i>"/><x id="INTERPOLATION" equiv-text="{{equipment.name}}"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i>"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/> ? </target>
+
+      <context-group purpose="location"><context context-type="sourcefile">app/components/stibs/components/equipments/equipments.component.html</context><context context-type="linenumber">105</context></context-group></trans-unit><trans-unit id="1289adbcf8d56fb9fd32a8a7f1e4f8e7df8df298" datatype="html">
+        <source>Mehr...</source><target state="translated">More Infos</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/equipments/equipments.component.html</context>
+          <context context-type="linenumber">117</context>
+        </context-group>
+      </trans-unit><trans-unit id="681ac20e63222be25f7ffcadffabeb7a8796754f" datatype="html">
+        <source>
+            <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/> Bezeichnung :<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/><x id="INTERPOLATION" equiv-text="{{equipment.name}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/> <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+            <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/> Equipmentnummer :<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/><x id="INTERPOLATION_1" equiv-text="{{equipment.number}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/> <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+            <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/> Genauigkeit :<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/><x id="INTERPOLATION_2" equiv-text="{{equipment.accuracy}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/> <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+            <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/> Ort :<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/><x id="INTERPOLATION_3" equiv-text="{{equipment.location}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/> <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+            <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/> Besitzer:<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/><x id="INTERPOLATION_4" equiv-text="{{equipment.user['forename']}}"/> <x id="INTERPOLATION_5" equiv-text="{{equipment.user['surname']}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/> <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+          </source><target state="translated">
+            <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/> Name :<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/><x id="INTERPOLATION" equiv-text="{{equipment.name}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/> <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+            <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/> Equipmentnumber :<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/><x id="INTERPOLATION_1" equiv-text="{{equipment.number}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/> <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+            <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/> Accuracy :<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/><x id="INTERPOLATION_2" equiv-text="{{equipment.accuracy}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/> <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+            <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/> Location :<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/><x id="INTERPOLATION_3" equiv-text="{{equipment.location}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/> <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+            <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/> Owner:<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/><x id="INTERPOLATION_4" equiv-text="{{equipment.user['forename']}}"/> <x id="INTERPOLATION_5" equiv-text="{{equipment.user['surname']}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/> <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+          </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/equipments/equipments.component.html</context>
+          <context context-type="linenumber">123</context>
+        </context-group>
+      </trans-unit><trans-unit id="cc03f535d17d79eaf80b53567e37e324ccb1dded" datatype="html">
+        <source>
+            <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/> Kalibrierungsdatum:<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/><x id="INTERPOLATION" equiv-text="{{equipment.calibrationDate | date :'dd.MM.yyyy'}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/> <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+            <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/> Kalibrierzyklus:<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/><x id="INTERPOLATION_1" equiv-text="{{equipment.interval}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/> <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+            <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/> Hersteller :<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/><x id="INTERPOLATION_2" equiv-text="{{equipment.manufacturer}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/> <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+            <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/> Type :<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/><x id="INTERPOLATION_3" equiv-text="{{equipment.type}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/> <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+          </source><target state="translated">
+            <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/> CalibrationDate:<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/><x id="INTERPOLATION" equiv-text="{{equipment.calibrationDate | date :'dd.MM.yyyy'}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/> <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+            <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/> Interval:<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/><x id="INTERPOLATION_1" equiv-text="{{equipment.interval}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/> <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+            <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/> Manufacturer :<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/><x id="INTERPOLATION_2" equiv-text="{{equipment.manufacturer}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/> <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+            <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/> Type :<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/><x id="INTERPOLATION_3" equiv-text="{{equipment.type}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/> <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+          </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/equipments/equipments.component.html</context>
+          <context context-type="linenumber">131</context>
+        </context-group>
+      </trans-unit><trans-unit id="3be30a2bb9931c1625f30b9b784592c0c229f645" datatype="html">
+        <source>
+            <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/> Beschreibung:<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/><x id="INTERPOLATION" equiv-text="{{equipment.description}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/> <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+            <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/> Änderung:<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/><x id="INTERPOLATION_1" equiv-text="{{equipment.modifyDate | date :'dd.MM.yyyy'}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/> <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+            <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/> Registrierung :<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/><x id="INTERPOLATION_2" equiv-text="{{equipment.createDate | date :'dd.MM.yyyy'}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/> <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+          </source><target state="translated">
+            <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/> Description:<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/><x id="INTERPOLATION" equiv-text="{{equipment.description}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/> <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+            <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/> Modification-Date:<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/><x id="INTERPOLATION_1" equiv-text="{{equipment.modifyDate | date :'dd.MM.yyyy'}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/> <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+            <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/> Creation-Date :<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/><x id="INTERPOLATION_2" equiv-text="{{equipment.createDate | date :'dd.MM.yyyy'}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/> <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+          </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/equipments/equipments.component.html</context>
+          <context context-type="linenumber">138</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="63bab9e8f167e18139ba19aa61acbabd35058106" datatype="html">
+        <source>
+  <x id="START_TAG_SECTION" ctype="x-section" equiv-text="&lt;section>"/>
+    <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/><x id="INTERPOLATION" equiv-text="{{ titel }}"/>, Update <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/>erfolgreich durchgeführt<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>
+  <x id="CLOSE_TAG_SECTION" ctype="x-section" equiv-text="&lt;/section>"/>
+  <x id="START_TAG_SECTION_1" ctype="x-section" equiv-text="&lt;section>"/>
+    <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/><x id="INTERPOLATION" equiv-text="{{ titel }}"/>, Update <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/>fehlgeschlagen<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>
+  <x id="CLOSE_TAG_SECTION" ctype="x-section" equiv-text="&lt;/section>"/>
+</source><target state="translated">
+  <x id="START_TAG_SECTION" ctype="x-section" equiv-text="&lt;section>"/>
+    <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/><x id="INTERPOLATION" equiv-text="{{ titel }}"/>, Update <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/>successfully performed<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>
+  <x id="CLOSE_TAG_SECTION" ctype="x-section" equiv-text="&lt;/section>"/>
+  <x id="START_TAG_SECTION_1" ctype="x-section" equiv-text="&lt;section>"/>
+    <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/><x id="INTERPOLATION" equiv-text="{{ titel }}"/>, Update <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/>failed<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>
+  <x id="CLOSE_TAG_SECTION" ctype="x-section" equiv-text="&lt;/section>"/>
+</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/stibs/components/snackbar/snacksync/snacksync.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

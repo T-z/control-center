@@ -1,0 +1,59 @@
+<h2 class="d-flex a-center">
+  <mat-icon>settings</mat-icon><span class="ml-2" i18n>Einstellungen</span>
+</h2>
+
+<mat-card>
+  <mat-accordion [formGroup]="settings">
+
+    <mat-expansion-panel formGroupName="timeout">
+
+      <mat-expansion-panel-header>
+        <mat-panel-title i18n>Timeout</mat-panel-title>
+        <mat-panel-description i18n>Timeout einstellen</mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <div>
+        <mat-form-field>
+          <input matInput type="number" placeholder="duration (Minuten)" min="1" formControlName="duration">
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-checkbox formControlName="show">in der Menüleiste anzeigen</mat-checkbox>
+      </div>
+
+    </mat-expansion-panel>
+
+    <mat-expansion-panel formGroupName="dashboard">
+
+      <mat-expansion-panel-header>
+        <mat-panel-title i18n>Dashboard</mat-panel-title>
+        <mat-panel-description i18n>Dashboard einstellen</mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <div>
+        <mat-checkbox formControlName="project" i18n>Projektstatus</mat-checkbox>
+      </div>
+      
+      <div>
+        <mat-checkbox formControlName="vehicle" i18n>Fahrzeugstatus</mat-checkbox>
+      </div>
+
+    </mat-expansion-panel>
+
+    <mat-expansion-panel formGroupName="theme">
+
+      <mat-expansion-panel-header>
+        <mat-panel-title i18n>Theme</mat-panel-title>
+        <mat-panel-description>Theme auswählen</mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <div>
+        <mat-checkbox formControlName="dark" i18n>Use dark theme</mat-checkbox>
+      </div>
+
+    </mat-expansion-panel>
+
+  </mat-accordion>
+
+</mat-card>

@@ -1,0 +1,25 @@
+<h3 mat-dialog-title>
+  <span i18n> Termin(e) eingeben</span>
+  <button mat-icon-button mat-dialog-close class="ml-auto">
+    <mat-icon>clear</mat-icon>
+  </button>
+</h3>
+<mat-dialog-content class="mat-typography">
+
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Start Datum" i18n-placeholder [(ngModel)]="customDate.start">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker2" placeholder="End Datum" i18n-placeholder [(ngModel)]="customDate.end">
+    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+    <mat-datepicker #picker2></mat-datepicker>
+  </mat-form-field>
+
+  <mat-dialog-actions  align="end">
+    <button mat-raised-button [mat-dialog-close]="data" color="primary" (click)="set_date()" i18n>speichern</button>
+  </mat-dialog-actions>
+
+</mat-dialog-content>

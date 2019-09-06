@@ -1,0 +1,65 @@
+<h2 mat-dialog-title>
+  <span class="mr-1" i18n>Prüfmittel</span>
+  <span *ngIf="equipment" i18n>bearbeiten</span>
+  <span *ngIf="!equipment" i18n>erstellen</span>
+  <button mat-icon-button mat-dialog-close class="ml-auto">
+    <mat-icon>clear</mat-icon>
+  </button>
+</h2>
+
+<form [formGroup]="form" (ngSubmit)="saveEquipment()">
+
+  <mat-dialog-content class="mat-typography">
+
+    <mat-form-field>
+      <input matInput i18n-placeholder placeholder="Bezeichnung"  formControlName="name" maxlength="40">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput i18n-placeholder placeholder="Einheit"   formControlName="accuracy" maxlength="20">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput [matDatepicker]="calibrationDatePicker" i18n-placeholder placeholder="Kalibrierungsdatum" formControlName="calibrationDate" >
+      <mat-datepicker-toggle matSuffix [for]="calibrationDatePicker"></mat-datepicker-toggle>
+      <mat-datepicker #calibrationDatePicker startView="year" [startAt]="startDate"></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput i18n-placeholder type="number" placeholder="Kalibrierzyklus"  formControlName="interval" >
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput  i18n-placeholder placeholder="Equipmentnummer"   formControlName="number">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput i18n-placeholder placeholder="Ort"  formControlName="location" maxlength="40">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput  i18n-placeholder placeholder="Variante"  formControlName="type">
+     </mat-form-field>
+
+    <mat-form-field>
+      <input matInput i18n-placeholder placeholder="Hersteller"  formControlName="manufacturer" maxlength="40">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-select  i18n-placeholder placeholder="Besitzer"   formControlName="userId">
+        <mat-option> --- </mat-option>
+        <mat-option *ngFor="let user of users" [value]="user.id"> {{ user.forename }} - {{ user.surname}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+    <mat-form-field>
+      <input matInput i18n-placeholder placeholder="Beschreibung"  formControlName="description">
+    </mat-form-field>
+   </mat-dialog-content>
+
+  <mat-dialog-actions class="justify-content-end">
+    <button mat-raised-button mat-dialog-close i18n>Abbrechen</button>
+    <button mat-raised-button type="submit" color="primary" i18n>Speichern</button>
+  </mat-dialog-actions>
+
+</form>

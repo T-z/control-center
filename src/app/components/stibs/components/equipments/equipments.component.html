@@ -1,0 +1,146 @@
+<h2 class="d-flex a-center">
+  <mat-icon>devices_other</mat-icon><span class="ml-2" i18n>Prüfmittelliste</span>
+</h2>
+
+<mat-card>
+
+  <div class="d-flex">
+
+    <mat-form-field>
+      <mat-icon matPrefix>search</mat-icon>
+      <input matInput  [formControl]="searchControl"  placeholder="Filter">
+    </mat-form-field>
+
+    <button mat-mini-fab color="primary" class="ml-auto" matTooltip="hinzufügen" i18n-matTooltip>
+      <mat-icon (click)="openAddEquipmentDialog()">add</mat-icon>
+    </button>
+
+  </div>
+  
+  <mat-card-content>
+    <mat-table [dataSource]="dataSource" matSort>
+      <ng-container matColumnDef="Name">
+        <mat-header-cell *matHeaderCellDef class="name-cell" i18n>Bezeichnung</mat-header-cell>
+        <mat-cell *matCellDef="let element" class="name-cell"><div [matTooltip]="element.name">{{element.name}}</div></mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="Number">
+        <mat-header-cell *matHeaderCellDef  class="number-cell" i18n>Equipmentnummer</mat-header-cell>
+        <mat-cell *matCellDef="let element" class="number-cell"><div [matTooltip]="element.number">{{element.number}}</div></mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="CalibrationDate">
+        <mat-header-cell *matHeaderCellDef i18n>Kalibrierungsdatum</mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <div *ngIf="!isDeadlineOver(element.calibrationDate, element.interval)">
+               {{element.calibrationDate | date :'dd.MM.yyyy'}}
+          </div>
+          <div *ngIf="isDeadlineOver(element.calibrationDate, element.interval)" style="color:#cc0000" >
+              {{element.calibrationDate | date :'dd.MM.yyyy'}}
+              <mat-icon matTooltip="Nächste Kalibrierung wurde  am {{ setDeadline(element.calibrationDate, element.interval) | date:'dd.MM.yyyy' }} geplant"
+                         i18n-matTooltip  matTooltipClass="custom-tooltip">notification_important</mat-icon>
+          </div>
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="Interval">
+        <mat-header-cell *matHeaderCellDef  class="interval-cell center-cell" i18n>Kalibrierzyklus</mat-header-cell>
+        <mat-cell *matCellDef="let element" class="interval-cell center-cell"><div [matTooltip]="element.interval">{{element.interval}}</div></mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="Accuracy">
+        <mat-header-cell *matHeaderCellDef class="accuracy-cell center-cell" i18n>Einheit</mat-header-cell>
+        <mat-cell *matCellDef="let element" class="accuracy-cell center-cell"><div [matTooltip]="element.accuracy">{{element.accuracy}}</div></mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="User">
+        <mat-header-cell   *matHeaderCellDef class="user-cell" i18n>Besitzer</mat-header-cell>
+        <mat-cell *matCellDef="let element; let i = index" class="user-cell"><div [matTooltip]="prepareUserName(element.user)">{{prepareUserName(element.user)}}</div></mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="Edit">
+        <mat-header-cell *matHeaderCellDef class="icon-cell center-cell"></mat-header-cell>
+        <mat-cell *matCellDef="let element; let i = index;" class="icon-cell center-cell">
+          <button mat-icon-button (click)="openEditEquipmentDialog(element, i)" matTooltip="bearbeiten"
+                  matTooltipClass="custom-tooltip" i18n-matTooltip>
+            <mat-icon>edit</mat-icon>
+          </button>
+        </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="Delete">
+        <mat-header-cell *matHeaderCellDef class="icon-cell center-cell"></mat-header-cell>
+        <mat-cell *matCellDef="let element; let i = index" class="icon-cell center-cell">
+          <button mat-icon-button (click)="openDeleteEquipmentDialog(element)" matTooltip="löschen"
+                  matTooltipClass="custom-tooltip" i18n-matTooltip>
+            <mat-icon>delete</mat-icon>
+          </button>
+        </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="More">
+        <mat-header-cell *matHeaderCellDef class="icon-cell center-cell"></mat-header-cell>
+        <mat-cell *matCellDef="let element" class="icon-cell center-cell">
+          <button mat-icon-button (click)="openMoreInfoEquipmentDialog(element)" matTooltip="mehr..."
+                  i18n-matTooltip>
+            <mat-icon>info</mat-icon>
+          </button>
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" (page)="onPageEquipmentChange($event)" showFirstLastButtons></mat-paginator>
+
+  </mat-card-content>
+
+</mat-card>
+
+<ng-template #deleteEquipmentDialogTemplate let-equipment>
+  <div class="dialog small">
+    <h2 mat-dialog-title class="d-flex align-items-center">
+      <span class="mr-1" i18n>Prüfmittel löschen</span>
+      <button mat-icon-button mat-dialog-close class="ml-auto">
+        <mat-icon>clear</mat-icon>
+      </button>
+    </h2>
+    <div mat-dialog-content>
+      <p i18n>Möchten Sie wirklich das Prüfmittel <b><i>{{equipment.name}}</i></b> löschen?</p>
+    </div>
+    <div mat-dialog-actions>
+      <button mat-raised-button mat-dialog-close class="ml-auto" i18n>Nein</button>
+      <button mat-raised-button [mat-dialog-close]="true"  color="primary" cdkFocusInitial i18n>Ja</button>
+    </div>
+  </div>
+</ng-template>
+<ng-template #moreInfoTemplate let-equipment>
+  <div>
+
+    <h2 mat-dialog-title class="d-flex">
+      <button mat-icon-button mat-dialog-close class="ml-auto">
+        <mat-icon>clear</mat-icon>
+      </button>
+    </h2>
+    <mat-dialog-content  class="d-flex f-column p-12 dialog-content">
+          <div class="my-4" i18n>
+            <span class="bold"> Bezeichnung :</span><span class="ml-2">{{equipment.name}}</span> <br/>
+            <span class="bold"> Equipmentnummer :</span><span class="ml-2">{{equipment.number}}</span> <br/>
+            <span class="bold"> Genauigkeit :</span><span class="ml-2">{{equipment.accuracy}}</span> <br/>
+            <span class="bold"> Ort :</span><span class="ml-2">{{equipment.location}}</span> <br/>
+            <span class="bold"> Besitzer:</span><span class="ml-2">{{equipment.user['forename']}}&nbsp;{{equipment.user['surname']}}</span> <br/>
+          </div>
+          <mat-divider></mat-divider>
+          <div class="my-4" i18n>
+            <span class="bold"> Kalibrierungsdatum:</span><span class="ml-2">{{equipment.calibrationDate | date :'dd.MM.yyyy'}}</span> <br/>
+            <span class="bold"> Kalibrierzyklus:</span><span class="ml-2">{{equipment.interval}}</span> <br/>
+            <span class="bold"> Hersteller :</span><span class="ml-2">{{equipment.manufacturer}}</span> <br/>
+            <span class="bold"> Type :</span><span class="ml-2">{{equipment.type}}</span> <br/>
+          </div>
+          <mat-divider></mat-divider>
+          <div class="my-4" i18n>
+            <span class="bold"> Beschreibung:</span><span class="ml-2">{{equipment.description}}</span> <br/>
+            <span class="bold"> Änderung:</span><span class="ml-2">{{equipment.modifyDate | date :'dd.MM.yyyy'}}</span> <br/>
+            <span class="bold"> Registrierung :</span><span class="ml-2">{{equipment.createDate | date :'dd.MM.yyyy'}}</span> <br/>
+          </div>
+    </mat-dialog-content>
+
+  </div>
+</ng-template>
+

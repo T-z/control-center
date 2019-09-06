@@ -1,0 +1,41 @@
+:host {
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2em;
+
+  mat-card {
+    margin: 1em 0;
+  }
+
+  .input-search {
+    width: 25%;
+  }
+
+}
+
+.description-cell, .location-cell , .creator-cell{
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.dialog-content{
+  font-size: 14px;
+}
+
+@media (max-width: 1000px) {
+
+  .initiator-cell {
+    display: none;
+  }
+
+}
+
+@media (max-width: 1125px) {
+
+  .creator-cell, .location-cell {
+    display: none;
+  }
+
+}

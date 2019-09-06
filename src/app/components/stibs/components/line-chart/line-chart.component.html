@@ -1,0 +1,54 @@
+<div class="chart">
+  <h4 *ngIf="currentProject() as project"><span i18n>Abarbeitungsstand</span> {{project.name}}</h4>
+  <div class="y_axis"><b i18n>Abarbeitung in %</b></div>
+      <canvas baseChart
+        [datasets]="myLineChartData"
+        [labels]="myLineChartLabels"
+        [options]="myLineChartOptions"
+        [colors]="myLineChartColors"
+        [legend]="myLineChartLegend"
+        [chartType]="myLineChartType" >
+      </canvas>
+  </div>
+<div class="info">
+
+  <div *ngIf="isFreigegeben">
+    <mat-icon>lock_open</mat-icon>
+  </div>
+
+  <div *ngIf="!isFreigegeben ">
+    <mat-icon>lock</mat-icon>
+  </div>
+
+  <div>{{currentVehicle}}<mat-icon class="material-icons" [ngClass]="{online: isOnline}">router</mat-icon></div>
+
+  <div *ngIf="numberOfDayLeft < 0"><span>{{-1*numberOfDayLeft}} <span i18n>Tag(e)</span></span><span class="ml-2" i18n>verspätet</span></div>
+  <div *ngIf="numberOfDayLeft > 0"><span>{{numberOfDayLeft}} <span i18n>Tag(e)</span></span><span class="ml-2" i18n>übrig</span></div>
+  <div>
+    <span *ngIf="isOnTime()" style="color: #00ac50" i18n>im Zeitplan</span>
+    <span *ngIf="!isOnTime()" style="color:#cca52e" i18n>hinter Zeitplan</span>
+  </div>
+
+  <div class="time-box">
+    <div style="margin:0.5em;"><b class="mr-1" i18n="">Start</b><span>{{startTermin | date :'dd.MM.yyyy'}}</span></div>
+    <div><b class="mr-1" i18n>Abgabe:</b><span>{{abgabeTermin | date :'dd.MM.yyyy'}}</span></div>
+    <button *ngIf="userAuth.isTeam() || userAuth.isAdministrator()" mat-icon-button i18n-matTooltip matTooltip="Termin bearbeiten" (click)="open_settingDateDialog('start')">
+      <mat-icon>edit</mat-icon>
+    </button>
+  </div>
+
+  <div class="m-4">
+    <span *ngIf="!isOnline"><b class="mr-1" i18n>Erfüllungsgrad zum {{lastZeitpunkt  | date:'dd.MM.yyyy'}}:</b>{{erfuellungsgrad}}%</span>
+    <span *ngIf="isOnline" class="online"><b class="mr-1" i18n>Erfüllungsgrad aktuell:</b>{{erfuellungsgrad}}%</span>
+  </div>
+
+  <button *ngIf="((userAuth.isAdministrator() || userAuth.isTeam()) && isFreigegeben)" class="m-3" mat-raised-button color="primary"
+    (click)="lockProcess()">
+        <div class="d-flex justify-content-center align-items-center"><span i18n>abschliessen</span><mat-icon>lock</mat-icon></div>
+  </button>
+  <button *ngIf="((userAuth.isAdministrator() || userAuth.isTeam()) && !isFreigegeben)" class="m-3" mat-raised-button color="primary"
+          (click)="unlockProcess()">
+    <div class="d-flex justify-content-center align-items-center"><span i18n>freigeben </span><mat-icon>lock_open</mat-icon></div>
+  </button>
+
+</div>

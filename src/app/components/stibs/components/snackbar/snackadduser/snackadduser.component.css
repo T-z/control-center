@@ -1,0 +1,10 @@
+.message{
+  float: left;
+  font-size: 12px;
+  color:#D8D8D8;
+}
+.action{
+  float:right;
+  font-size: 12px;
+  color:#FACC2E;
+}

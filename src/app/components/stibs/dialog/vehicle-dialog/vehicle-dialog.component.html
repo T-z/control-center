@@ -1,0 +1,43 @@
+<h2 mat-dialog-title>
+  <span class="mr-1">Fahrzeug anlegen</span>
+  <button mat-icon-button mat-dialog-close class="ml-auto">
+    <mat-icon>clear</mat-icon>
+  </button>
+</h2>
+<form [formGroup]="form" (ngSubmit)="add_vehicle()" >
+  <mat-dialog-content class="mat-typography">
+    <mat-form-field>
+      <input matInput placeholder="Name" i18n="" formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Number"  type="number" i18n="" formControlName="number">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Type" i18n="" formControlName="type">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput [matDatepicker]="startPicker" placeholder="Choose start date">
+       <mat-datepicker-toggle matSuffix [for]="startPicker"></mat-datepicker-toggle>
+       <mat-datepicker #startPicker startView="year" [startAt]="startDate"></mat-datepicker>
+    </mat-form-field>
+
+     <mat-form-field>
+        <input matInput [matDatepicker]="endPicker" placeholder="Choose end date">
+        <mat-datepicker-toggle matSuffix [for]="endPicker"></mat-datepicker-toggle>
+        <mat-datepicker #endPicker startView="year" [startAt]="startDate"></mat-datepicker>
+      </mat-form-field>
+
+
+    <mat-form-field>
+      <input matInput placeholder="Project" i18n="" formControlName="project" disabled>
+    </mat-form-field>
+  </mat-dialog-content>
+  <mat-dialog-actions  align="end">
+    <button class="mat-raised-button"   type="submit"  [disabled]="form.invalid" >Speichern</button>
+    <button class="mat-raised-button"  [mat-dialog-close]="true">Abbrechen</button>
+  </mat-dialog-actions>
+</form>
+

@@ -1,0 +1,115 @@
+<h2>
+  <span i18n>Reports</span>
+</h2>
+
+<div class="d-flex justify-content-end">
+  <mat-form-field class="mx-2">
+    <mat-select i18n-placeholder placeholder="Projekt" [formControl]="projectControl" [compareWith]="compareFn">
+      <mat-option *ngFor="let project of projects" [value]="project">{{project.name}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="mx-2">
+    <mat-select i18n-placeholder placeholder="Fahrzeug" [formControl]="vehicleControl" [compareWith]="compareFn">
+      <mat-option *ngFor="let vehicle of vehicles" [value]="vehicle">{{vehicle.name}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<mat-card class="protocol-state">
+
+  <mat-card-title>
+    <mat-icon>format_align_left</mat-icon><span class="ml-2" i18n>Protokollstatus</span>
+  </mat-card-title>
+
+  <mat-card-content>
+    <app-bar-horizontal-chart></app-bar-horizontal-chart>
+  </mat-card-content>
+
+</mat-card>
+
+<mat-card class="report-state">
+  <mat-card-title>
+    <mat-icon>note</mat-icon><span class="ml-2" i18n>Report Liste</span>
+  </mat-card-title>
+  <mat-card-content>
+    <mat-table [dataSource]="dataSource" (matSortChange)="onSortData($event)" matSort>
+      <ng-container matColumnDef="Name">
+        <mat-header-cell *matHeaderCellDef class="path-cell" i18n mat-sort-header>Name</mat-header-cell>
+        <mat-cell *matCellDef="let report" class="path-cell">{{report.path}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="Report">
+        <mat-header-cell *matHeaderCellDef i18n>Report</mat-header-cell>
+        <mat-cell *matCellDef="let report" class="report-cell">
+
+          <div class="report-row">
+            <div *ngIf="reportCellDate(report, ReportType.INSTRUCTION) as d; else notPresent">{{d | date: 'short'}}</div>
+            <ng-container [ngTemplateOutlet]="reportCellOutlet(report, ReportType.INSTRUCTION)" [ngTemplateOutletContext]="reportCellContext(report, ReportType.INSTRUCTION)"></ng-container>
+            <div><button mat-raised-button color="primary" (click)="createInstruction(report)" i18n>PA erstellen</button></div>
+          </div>
+
+          <div class="report-row">
+            <div *ngIf="reportCellDate(report, ReportType.DOCUMENT_DRAFT) as d; else notPresent">{{d | date: 'short'}}</div>
+            <ng-container [ngTemplateOutlet]="reportCellOutlet(report, ReportType.DOCUMENT_DRAFT)" [ngTemplateOutletContext]="reportCellContext(report, ReportType.DOCUMENT_DRAFT)"></ng-container>
+            <div><button mat-raised-button color="primary" (click)="createReport(report)" i18n>Bericht erstellen</button></div>
+          </div>
+
+          <div class="report-row">
+            <div *ngIf="reportCellDate(report, ReportType.DOCUMENT_FINAL) as d; else notPresent">{{d | date: 'short'}}</div>
+            <ng-container [ngTemplateOutlet]="reportCellOutlet(report, ReportType.DOCUMENT_FINAL)" [ngTemplateOutletContext]="reportCellContext(report, ReportType.DOCUMENT_FINAL, true)"></ng-container>
+            <div><button mat-raised-button color="accent" (click)="createReport(report, true)" i18n>Endbericht erstellen</button></div>
+          </div>
+
+        </mat-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+
+    <mat-paginator #nodeMetaPaginator [pageSizeOptions]="[5, 10, 20]" (page)="onPageChange($event)"
+      showFirstLastButtons>
+    </mat-paginator>
+
+    <div class="legend">
+      <a mat-raised-button color="primary" [href]="archiveDownload()" i18n>
+        Berichte herunterladen
+      </a>
+    </div>
+
+  </mat-card-content>
+</mat-card>
+
+<ng-template #notPresent><div>---</div></ng-template>
+
+<ng-template #failed let-job><div class="job failed">Job Failed! <small>{{job.message}}</small></div></ng-template>
+
+<ng-template #progress let-job>
+  <div class="job progress">
+    <div>{{job.progress}} %</div>
+    <mat-progress-bar mode="determinate" value="{{job.progress}}"></mat-progress-bar>
+  </div>
+</ng-template>
+
+<ng-template #downloadLink let-d><div *ngIf="d"><a [href]="d.path" download>{{d.name}}</a></div></ng-template>
+
+<ng-template #reportComment let-options>
+  <div>
+    <h2 mat-dialog-title class="d-flex align-items-center">
+      <span class="mr-1" i18n>Kommentar für Bericht</span>
+      <button mat-icon-button mat-dialog-close class="ml-auto" tabindex="-1">
+        <mat-icon>clear</mat-icon>
+      </button>
+    </h2>
+    <div mat-dialog-content>
+      <mat-form-field class="report-comment">
+        <textarea #comment matInput placeholder="Kommentar" i18n-placeholder [mat-autosize]="true" [matAutosizeMaxRows]="12" [matAutosizeMinRows]="6"></textarea>
+      </mat-form-field>
+      <mat-form-field [ngStyle]="{display: options.final ? 'block' : 'none'}">
+        <input #password type="password" matInput placeholder="Signatur Passwort" i18n-placeholder>
+      </mat-form-field>
+    </div>
+    <div mat-dialog-actions class="justify-content-end">
+      <button mat-raised-button [mat-dialog-close]="{comment: comment.value, password: password.value}" color="primary" i18n>Erstellen</button>
+    </div>
+  </div>
+</ng-template>

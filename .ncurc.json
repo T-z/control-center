@@ -1,0 +1,8 @@
+{
+  "reject": [
+    "typescript",
+    "zone.js",
+    "core-js"
+  ]
+}
+

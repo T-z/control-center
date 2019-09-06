@@ -1,0 +1,224 @@
+<h2 class="d-flex a-center">
+  <mat-icon>settings</mat-icon><span class="ml-2" i18n>Prüfkonfigurationen</span>
+</h2>
+
+<mat-card>
+
+  <mat-card-content>
+
+    <div class="upload">
+
+      <div class="controls">
+        <input type="file" hidden #fileInput />
+        <button mat-mini-fab color="primary" (click)="fileInput.click()">
+          <mat-icon>attachment</mat-icon>
+        </button>
+        <span class="file-name" *ngIf="!fileInput.files[0]?.name" i18n><i> bitte wählen Sie die Prufkonfiguration aus...</i></span>
+        <span class="file-name"  *ngIf="fileInput.files[0]?.name"><i>{{fileInput.files[0]?.name}}</i></span>
+        <button mat-raised-button *ngIf="fileInput.files[0]?.name" color="primary" (click)="upload(fileInput.files[0])"
+          style="margin-left: 1em;">
+          <span class="mr-2" i18n>Konfiguration hochladen</span>
+          <mat-icon>cloud_upload</mat-icon>
+        </button>
+      </div>
+
+      <div class="indicator" [class.active]="upload_inProcess">
+        <mat-progress-bar mode="query"></mat-progress-bar>
+        <span i18n><i>...in Bearbeitung</i></span>
+      </div>
+
+    </div>
+
+    <div class="job-list">
+
+      <mat-table [dataSource]="dataSourceJobTask">
+        <ng-container matColumnDef="Name">
+          <mat-header-cell *matHeaderCellDef i18n>Name</mat-header-cell>
+          <mat-cell *matCellDef="let job">{{job.name}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="Progress">
+          <mat-header-cell *matHeaderCellDef class="progress-cell" i18n>Fortschritt</mat-header-cell>
+          <mat-cell *matCellDef="let job" class="progress-cell">
+            <div>{{job.progress}} %</div>
+            <mat-progress-bar mode="determinate" value="{{job.progress}}"></mat-progress-bar>
+          </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="State">
+          <mat-header-cell *matHeaderCellDef class="center-cell state-cell" i18n>Status</mat-header-cell>
+          <mat-cell *matCellDef="let job" class="center-cell state-cell {{job.state}}">
+            <span *ngIf="matchJobStatus(job.state,'completed')" i18n>abgeschlossen</span>
+            <span *ngIf="matchJobStatus(job.state,'waiting')" i18n>warten</span>
+            <span *ngIf="matchJobStatus(job.state,'active')" i18n>aktiv</span>
+            <span *ngIf="matchJobStatus(job.state,'delayed')" i18n>verzögert</span>
+            <span *ngIf="matchJobStatus(job.state,'failed')" i18n="status Failed">fehlerhaft</span>
+          </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="Details">
+          <mat-header-cell *matHeaderCellDef class="icon-cell center-cell" i18n></mat-header-cell>
+          <mat-cell *matCellDef="let job; let i = index" class="icon-cell center-cell">
+            <button mat-icon-button *ngIf="job.info" (click)="openInfoDialog(job.info)" matTooltip="Information"
+              matTooltipClass="custom-tooltip" i18n-matTooltip>
+              <mat-icon>info</mat-icon>
+            </button>
+          </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="Delete">
+          <mat-header-cell *matHeaderCellDef class="icon-cell center-cell" i18n></mat-header-cell>
+          <mat-cell *matCellDef="let job" class="icon-cell center-cell">
+            <button mat-icon-button (click)="openDeleteJobDialog(job)" matTooltip="Löschen" matTooltipClass="custom-tooltip"
+              i18n-matTooltip>
+              <mat-icon>delete</mat-icon>
+            </button>
+          </mat-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="displayedColumnsJobTask"></mat-header-row>
+        <mat-row *matRowDef="let job; columns: displayedColumnsJobTask;"></mat-row>
+      </mat-table>
+
+      <mat-paginator #paginatorJobTask [pageSizeOptions]="[5, 10, 20]" (page)="onPageJobTaskChange($event)"
+        showFirstLastButtons></mat-paginator>
+
+    </div>
+
+  </mat-card-content>
+
+</mat-card>
+
+<mat-card>
+
+  <mat-card-content>
+    <mat-form-field class="ml-auto">
+      <mat-select placeholder="Project" [compareWith]="compareFn" i18n-placeholder [formControl]="projectControl">
+        <mat-option *ngFor="let project of projects" [value]="project">{{project.name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-tab-group>
+      <mat-tab  label="Projektversion" i18n-label>
+
+        <mat-table class="project-list" [dataSource]="dataSourceProject">
+          <ng-container matColumnDef="Version">
+            <mat-header-cell *matHeaderCellDef i18n>Version</mat-header-cell>
+            <mat-cell *matCellDef="let project">{{project.version}}</mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="Status">
+            <mat-header-cell *matHeaderCellDef class="center-cell"></mat-header-cell>
+            <mat-cell *matCellDef="let project" class="center-cell">
+              <button mat-raised-button [ngClass]="{'active': project.active}" (click)="toggleProjectStatus(project)">
+                <span *ngIf="project.active" i18n>aktiv</span>
+                <span *ngIf="!project.active" i18n>inaktiv</span>
+              </button>
+            </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="Delete">
+            <mat-header-cell *matHeaderCellDef class="icon-cell center-cell"></mat-header-cell>
+            <mat-cell *matCellDef="let project" class="icon-cell center-cell">
+              <button mat-icon-button (click)="openDeleteProjectVersionDialog(project)" matTooltip="löschen"
+                class="deleteIcon" matTooltipClass="custom-tooltip" i18n-matTooltip>
+                <mat-icon>delete</mat-icon>
+              </button>
+            </mat-cell>
+          </ng-container>
+          <mat-header-row *matHeaderRowDef="displayedColumnsProject"></mat-header-row>
+          <mat-row *matRowDef="let project; columns: displayedColumnsProject;"></mat-row>
+        </mat-table>
+
+        <mat-paginator #paginatorProject (page)="onPageProjectChange($event)" [pageSizeOptions]="[5, 10, 20]"
+          showFirstLastButtons></mat-paginator>
+
+      </mat-tab>
+
+      <mat-tab label="Fahrzeug" i18n-label>
+
+        <mat-table class="vehicle-list" [dataSource]="dataSourceVehicles">
+          <ng-container matColumnDef="Name">
+            <mat-header-cell *matHeaderCellDef i18n>Name</mat-header-cell>
+            <mat-cell *matCellDef="let vehicle">{{vehicle.name}}</mat-cell>
+          </ng-container>
+          <ng-container  matColumnDef="Number">
+            <mat-header-cell *matHeaderCellDef i18n>Nummer</mat-header-cell>
+            <mat-cell *matCellDef="let vehicle">{{vehicle.number}}</mat-cell>
+          </ng-container>
+          <mat-header-row *matHeaderRowDef="displayedColumnsVehicle"></mat-header-row>
+          <mat-row *matRowDef="let element; columns: displayedColumnsVehicle;"></mat-row>
+        </mat-table>
+
+        <mat-paginator #paginatorVehicle (page)="onPageVehicleChange($event)" [pageSizeOptions]="[5, 10, 20]"
+          showFirstLastButtons>
+        </mat-paginator>
+      </mat-tab>
+
+    </mat-tab-group>
+
+  </mat-card-content>
+
+</mat-card>
+
+<ng-template #deleteProjectVersionDialogTemplate let-projectItem>
+  <div class="dialog small">
+    <h2 mat-dialog-title class="d-flex align-items-center">
+      <span class="mr-1" i18n>Projekt-Version löschen</span>
+      <button mat-icon-button mat-dialog-close class="ml-auto">
+        <mat-icon>clear</mat-icon>
+      </button>
+    </h2>
+    <div mat-dialog-content>
+      <p i18n>Möchten Sie wirklich die Projektversion <b><i>{{projectItem.version}}</i></b> löschen?</p>
+    </div>
+    <div mat-dialog-actions>
+      <button mat-raised-button mat-dialog-close class="ml-auto" i18n>Nein</button>
+      <button mat-raised-button [mat-dialog-close]="true"  color="primary" cdkFocusInitial i18n>Ja</button>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #deleteVehicleDialogTemplate let-vehicle>
+  <div class="dialog small">
+    <h2 mat-dialog-title class="d-flex align-items-center">
+      <span class="mr-1" i18n>Fahrzeug löschen</span>
+      <button mat-icon-button mat-dialog-close class="ml-auto">
+        <mat-icon>clear</mat-icon>
+      </button>
+    </h2>
+    <div mat-dialog-content>
+      <p i18n>Möchten Sie wirklich das Fahrzeug <b><i>{{vehicle.name}}</i></b> löschen?</p>
+    </div>
+    <div mat-dialog-actions>
+      <button mat-raised-button mat-dialog-close class="ml-auto" i18n>Nein</button>
+      <button mat-raised-button [mat-dialog-close]="true"  color="primary" cdkFocusInitial i18n>Ja</button>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #deleteJobDialogTemplate let-jobTask>
+  <div class="dialog small">
+    <h2 mat-dialog-title class="d-flex align-items-center">
+      <span class="mr-1" i18n>Prüf-Konfigurationen löschen</span>
+      <button mat-icon-button mat-dialog-close class="ml-auto">
+        <mat-icon>clear</mat-icon>
+      </button>
+    </h2>
+    <div mat-dialog-content>
+      <p i18n>Möchten Sie wirklich die Konfiguration <b><i>{{jobTask.name}}</i></b> löschen?</p>
+    </div>
+    <div mat-dialog-actions>
+      <button mat-raised-button mat-dialog-close class="ml-auto" i18n>Nein</button>
+      <button mat-raised-button [mat-dialog-close]="true"  color="primary" cdkFocusInitial i18n>Ja</button>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #moreInfoTemplate let-jobInfos>
+  <div>
+    <h3  class="d-flex c-red" mat-dialog-title >
+      <span class="mr-1">Failed</span>
+      <button mat-icon-button mat-dialog-close class="ml-auto">
+        <mat-icon>clear</mat-icon>
+      </button>
+    </h3>
+    <div  class="d-flex f-column p-12" mat-dialog-content>
+      <ol class="p-1">
+        <li>{{ jobInfos }}</li>
+      </ol>
+    </div>
+  </div>
+</ng-template>

@@ -1,0 +1,54 @@
+<mat-card>
+
+  <mat-card-content>
+    <div class="header">
+      <img src="assets/images/logo_white.png" width="250" alt="_logo">
+      <div class="title">STIBS<sup><small>2</small></sup></div>
+      <div class="subtitle">Control Center</div>
+    </div>
+  </mat-card-content>
+
+  <div>
+
+    <img class="mx-2 flag-icon" src="assets/flags/gb.svg"/>
+    <img class="mx-2 flag-icon" src="assets/flags/de.svg"/>
+
+    <h2 i18n>Reset Password</h2>
+
+    <mat-divider></mat-divider>
+
+    <form [formGroup]="resetForm" (submit)="reset()">
+
+      <mat-form-field class="matFormField">
+
+        <input matInput #pwInput1 placeholder="Passwort" type="password" i18n-placeholder formControlName="password">
+
+        <mat-icon *ngIf="pwInput1.type === 'password'" matSuffix (click)="pwInput1.type = 'text'">visibility</mat-icon>
+        <mat-icon *ngIf="pwInput1.type === 'text'" matSuffix (click)="pwInput1.type = 'password'">visibility_off</mat-icon>
+
+      </mat-form-field>
+
+      <mat-form-field class="matFormField">
+
+        <input matInput #pwInput2 placeholder="Wdh. Passwort" type="password" i18n-placeholder formControlName="confirm">
+
+        <mat-icon *ngIf="pwInput2.type === 'password'" matSuffix (click)="pwInput2.type = 'text'">visibility</mat-icon>
+        <mat-icon *ngIf="pwInput2.type === 'text'" matSuffix (click)="pwInput2.type = 'password'">visibility_off</mat-icon>
+
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit" [disabled]="resetForm.invalid">Reset</button>
+
+    </form>
+
+  </div>
+
+</mat-card>
+
+<ng-template #infoTemplate>
+  <span i18n>Your will receive a confirm mail soon! Please login with your new credentials.</span>
+  <div>
+    <button mat-button (click)="routeToLogin()" i18n>Login</button>
+  </div>
+
+</ng-template>

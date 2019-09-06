@@ -1,0 +1,172 @@
+@import '../../../style/theme/color.scss';
+
+$mat-icon-margin: 0.75em;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+mat-toolbar {
+
+  font-size: 0.95em !important;
+
+  mat-divider {
+    margin: 0 .75em;
+    height: 65%;
+  }
+
+  &.light {
+
+    color: white;
+    background: linear-gradient(180deg, map_get($mat-primary, 500) 0%, lighten(map_get($mat-primary, 500), 20%) 100%);
+
+  }
+
+  .project-select {
+
+    button {
+      min-width: 175px;
+      text-align: right;
+    }
+
+  }
+
+  .flag {
+
+    cursor: pointer;
+
+    &.current {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+  }
+
+  .idle-timer {
+    display: flex;
+    align-items: center;
+  }
+
+  .user-setting {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+}
+
+mat-sidenav {
+
+  width: 15%;
+  min-width: 225px;
+
+  .nav-drawer-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+
+  mat-panel-title {
+    align-items: center;
+  }
+
+  mat-nav-list {
+
+    mat-list-item {
+
+      font-size: 0.95em;
+
+      mat-icon {
+        margin-right: $mat-icon-margin ;
+      }
+
+      &:hover {
+        background-color: map_get($mat-primary, 500);
+        color:map_get($mat-primary, 50);
+      }
+    
+      &.active {
+        background-color: lighten(map_get($mat-primary, 500), 5%);
+        color:map_get($mat-primary, 50);
+      }
+
+    }
+
+  }
+
+  mat-expansion-panel {
+
+    mat-icon {
+      margin-right: $mat-icon-margin;
+    }
+
+    .mat-expansion-panel-header {
+      padding: 0 15px !important;
+    }
+
+  }
+
+
+  .footer {
+
+    padding: 1.25em;
+    margin-top: auto;
+    position: relative;
+
+    &:hover {
+      .version {
+        opacity: 1;
+      }
+    }
+
+    .version {
+
+      opacity: 0;
+      padding: 0.55em 0.75em;
+      font-size: 0.65em;
+      position: absolute;
+
+      top: 50%;
+      left: 50%;
+
+      transition: opacity 1s ease;
+      transform: translate(-50%, -50%);
+
+      border-radius: 0.5em;
+
+      span:first-child {
+        font-style: italic;
+      }
+
+    }
+
+    .powered {
+
+      display: flex;
+      user-select: none;
+      align-items: center;
+
+      span {
+        font-size: 0.75em;
+        font-style: italic;
+      }
+    
+      img {
+        margin-left: 0.5em;
+        height: 0.75em;
+      }
+
+    }
+
+  }
+
+}
+
+mat-sidenav-container {
+
+  flex: 1;
+
+}

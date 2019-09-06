@@ -1,0 +1,32 @@
+:host {
+  
+  display: block;
+  padding: 2em;
+
+  .signature-cell {
+    min-width: 100px;
+    max-width: 100px;
+  }
+
+  .department-cell{
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+  
+}
+
+@media (max-width: 1000px) {
+
+  .signature-cell {
+    display: none;
+  }
+
+}
+
+@media (max-width: 1125px) {
+
+  .email-cell, .authority-cell {
+    display: none;
+  }
+
+}

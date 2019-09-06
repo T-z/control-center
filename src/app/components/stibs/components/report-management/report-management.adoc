@@ -1,0 +1,89 @@
+= GUI Dokumentation für STIBS2CC Report Management
+
+// asciidoc settings for DE (German)
+// ==================================
+// toc-title definition MUST follow document title without blank line!
+:toc-title: Inhaltsverzeichnis
+
+// enable table-of-contents
+:toc:
+:sectanchors:
+:sectnums:
+
+:caution-caption: Achtung
+:important-caption: Wichtig
+:note-caption: Hinweis
+:tip-caption: Tip
+:warning-caption: Warnung
+
+:appendix-caption: Anhang
+:example-caption: Beispiel
+:figure-caption: Abbildung
+:table-caption: Tabelle
+
+// where are images located?
+:imagesdir: ./adoc
+
+
+[[section-introduction-and-goals]]
+==	Einführung und Ziele
+Das Reportmanagement soll einen schnellen Überblick zu den Reports geben. Die Reports müssen erstellt, heruntergeladen und gefiltert werden können.
+
+.Reportliste
+image::reportm.png[]
+
+
+=== Aufgabenstellung
+Darstellung der Reportliste.
+
+* Tabelle
+* Steuerelemente
+
+=== Benutzer
+[cols="1,2a" options="header"]
+|===
+|Rolle |Funktion
+| _Manager_/_Prüfer_ 
+| 
+* Übersicht zur Report
+* Bedienelemnte 
+| 
+|===
+
+=== External interfaces
+
+.Server Anfragen
+[width="80%",options="header",cols="1,1,2,4a"]
+|=======
+|Anfrage  | Typ | Parameter |erwartete Antwort 
+|getReportStatus |GET    |Flotte 
+|
+Reports 
+
+- offene
+- fertige 
+
+|Anfrage |POST   |Parameter |Create new resources 
+|Anfrage |PUT    |Parameter |Change a resource. 
+|Anfrage |DELETE |Parameter |Delete a resource. 
+|=======
+
+
+=== Funktionen
+
+
+
+.Define the fundamental actions that have to take place in the software in accepting and processing the inputs and in processing and generating the outputs, including 
+.. Validity checks on the inputs 
+.. Exact sequence of operations 
+.. Responses to abnormal situations, including 
+... Overflow 
+... Communication facilities 
+... Error handling and recovery 
+.. Effect of parameters 
+.. Relationship of outputs to inputs, including 
+... Input/output sequences 
+... Formulas for input to output conversion 
+
+It may be appropriate to partition the functional requirements into subfunctions or subprocesses. This does not imply that the software design will also be partitioned that way. 
+

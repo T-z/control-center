@@ -1,0 +1,90 @@
+= GUI Dokumentation für STIBS2CC : Line-chart drawing
+
+// asciidoc settings for DE (German)
+// ==================================
+// toc-title definition MUST follow document title without blank line!
+:toc-title: Inhaltsverzeichnis
+
+// enable table-of-contents
+:toc:
+:sectanchors:
+:sectnums:
+
+:caution-caption: Achtung
+:important-caption: Wichtig
+:note-caption: Hinweis
+:tip-caption: Tip
+:warning-caption: Warnung
+
+:appendix-caption: Anhang
+:example-caption: Beispiel
+:figure-caption: Abbildung
+:table-caption: Tabelle
+
+// where are images located?
+:imagesdir: ./adoc
+
+
+[[section-introduction-and-goals]]
+==	Einführung und Ziele
+Für jedes Fahrzeug ist eine Ansicht Fahrzeugcockpit vorzusehen. Diese könnte einfach die Ansicht sein, die man erhält
+wenn man den Filter auf ein Fahrzeug setzt.
+Das Diagramm sollte die Abarbeitungsstand anzeigen.
+
+.Übersicht Seite (Algemein)
+image::pic1.png[]
+
+.Eingeben der Start-Termine.
+image::pic2.png[]
+
+.Eingeben der Abgabe-Termine
+image::pic3.png[]
+
+
+=== Aufgabenstellung
+
+* Im Diagramm muss immer der offizielle Start-Termin & Abgabe-Termin laut eingegebenen Terminplan und der tatsächliche Start-Termin (Abarbeitung > 0) angezeigt werden.
+* Der Start-Termin & Abgabe-Termin soll im CC eingegeben werden können von Teamleiter und Admin.
+* Das Diagramm startet auf der X-Achse mit dem Start-Termin ODER wenn Ist-Abarbeitung > 0, je nach dem was früher kommt.
+* Das Diagramm endet wenn der Ist-Stand 100 % beträgt ODER beim Abgabetermin, je nach dem was später kommt.
+* Es gibt die Möglichkeit,dass der Ist-Stand auch fallen kann. (Prüfungen wiederholen)
+* Sollte der Ist-Stand von 100 % auf einen niedrigeren Stand zurückfallen, muss das Diagramm auf der X-Achse fortgesetzt werden.
+* Die angezeigten Prozentzahlen dürfen nicht aufgerundet werden. Eine Anzeige von Ganzzahlen ist ausreichend.
+* Auf der gleichen Ansicht muss ersichtlich sein, wann die letzte Synchronisierung stattgefunden hat.
+* (Kennzahlen 1) Erfüllungsgrad zur letzten Synchronisierung soll angezeigt werden: Delta zwischen Ist- und Soll in Prozent. Wenn das Fahrzeug synchronisiert ist soll die Kennzahl "Erfüllungsgrad aktuell" heißen, ansonsten "Erfüllungsgrad zum *Zeitpunkt*".
+* (kennzahlen 2) Auch angezeigt wird, die Tage um die sich die Abgabe verspätet hat ODER wieviele Tage noch bis zur Abgabe.
+* Im Control Center hat jeder das Recht sich das Diagramm und die Kennzahlen anzugucken.
+* Ein Teamleiter oder Admin muss die Abarbeitung auf abgeschlossen setzen können. Dafür ist ein Button im Fahrzeugcockpit vorzusehen. Über den selben Button kann die Bearbeitung auch wieder fortgesetzt werden. Die Beschriftung des Buttons ändert sich je nach Zustand.  Der Ist-Abarbeitungsstand wird dadurch aber nicht überschrieben. Dies hat aber keine Rückwirkung auf STIBS.
+  Hintergrund: Manche PPs lassen sich evtl nicht abschließen, z.B. aufgrund von Fehlteilen. Diese werden im Service fertiggestellt.
+* Bitte Export Funktion vorsehen für alle Nutzer
+* Bitte gut sichtbar eine Statusmeldung anzeigen: Status: im Zeitplan (wenn Ist-Abarbeitung>Soll-Abarbeitung; grüne Schrift), hinter Zeitplan (gelb markiert) oder verspätet (wenn Abgabetermin schon verstrichen, rote Schrift)
+* Bitte gut sichtbar eine Statusmeldung anzeigen: Arbeits-Status: in Arbeit oder abgeschlossen (abgeschlossen heißt 100 % ODER manuell auf abgeschlossen gesetzt)
+
+
+=== Backend-Request
+[width="80%",options="header",cols="1,1,1,2a"]
+|===
+|Function-Beschreibung | Typ | Paramater : JSON | Beispiel
+| _Start & Abgabe Termin einstellen_ |  POST |
+
+ {
+    project: '',
+    vehicle: {},
+    origin: '',
+     date: ''
+    } | { project: "FLIRT3 BW1 EMU5",
+          vehicle: {id: 1234, name: "1429 123", number: "123", type: "1501", prefix: "1429"},
+          origin: "Start",
+          date: "13.06.2019 }
+
+| _Abarbeitung abschließen_| POST |
+   {project: '', vehicle: {}, modus: ''} |
+     { project: "FLIRT3 BW1 EMU5",
+       vehicle: {id: 1234, name: "1429 123", number: "123", type: "1501", prefix: "1429"},
+       modus: "forsetzen"
+     }
+|===
+
+
+
+

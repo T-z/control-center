@@ -1,0 +1,64 @@
+variables:
+  NEXUS_URL_RAW: nexus.intranet.vipco.de/repository/raw-internal/STIBS/CC/Frontend
+  NEXUS_URL_NPM_ALL: nexus.intranet.vipco.de/repository/npm-all/
+
+stages:
+  - build
+  - deploy
+
+build-de:
+  stage: build
+  image: node:10-stretch
+  script:
+    - echo "export const version = '${CI_COMMIT_REF_NAME}';" > src/version.ts
+    - yarn config set registry "https://$NEXUS_URL_NPM_ALL"
+    - yarn
+    - yarn build-de
+  cache:
+    key: cache-yarn
+    paths:
+      - node_modules
+      - yarn.lock
+  artifacts:
+    paths:
+      - dist/de
+    expire_in: 1 week
+  except:
+    - master
+
+build-en:
+  stage: build
+  image: node:10-stretch
+  script:
+    - echo "export const version = '${CI_COMMIT_REF_NAME}';" > src/version.ts
+    - yarn config set registry "https://$NEXUS_URL_NPM_ALL"
+    - yarn
+    - yarn build-en
+  cache:
+    key: cache-yarn
+    paths:
+      - node_modules
+      - yarn.lock
+  artifacts:
+    paths:
+      - dist/en
+    expire_in: 1 week
+  except:
+    - master    
+
+deploy:
+  stage: deploy
+  image: gitlab.intranet.vipco.de:4567/helper/zopfli-brotli:latest
+  dependencies:
+    - build-de
+    - build-en
+  script:
+    - cd dist
+    - find . -regextype posix-egrep -regex ".*\.(svg|js|txt|html|json|css)" -exec zopfli {} \; -exec brotli {} \;
+    - tar czvf ../cc-frontend-${CI_COMMIT_REF_SLUG}.tar.gz *
+    - STATUSCODE=$(curl --silent --output /dev/null --write-out "%{http_code}" -u "${NEXUS_USERNAME}":"${NEXUS_PASSWORD}" --upload-file "../cc-frontend-${CI_COMMIT_REF_SLUG}.tar.gz" "https://${NEXUS_URL_RAW}/cc-frontend-${CI_COMMIT_REF_NAME}.tar.gz")
+    - if [ "${STATUSCODE}" -eq 201 ]; then $(exit 0); else $(exit 1); fi
+  only:
+    - /^v\d+(\.\d+){2}/
+  except:
+    - branches

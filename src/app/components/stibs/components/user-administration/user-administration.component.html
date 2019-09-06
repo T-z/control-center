@@ -1,0 +1,167 @@
+<h2 class="d-flex a-center">
+  <mat-icon>person</mat-icon>
+  <span class="ml-2" i18n>Benutzerverwaltung</span>
+</h2>
+
+<mat-card>
+
+  <mat-card-title>
+
+    <mat-form-field>
+      <mat-icon matPrefix>search</mat-icon>
+      <input matInput [formControl]="searchControl" placeholder="Filter" i18n-placeholder>
+    </mat-form-field>
+
+    <button mat-mini-fab color="primary" (click)="openAddUserDialog()" class="ml-auto"
+            matTooltip="neuer Benutzer anlegen" i18n-matTooltip>
+      <mat-icon>person_add</mat-icon>
+    </button>
+
+  </mat-card-title>
+
+  <mat-card-content>
+
+    <mat-table [dataSource]="dataSource" (matSortChange)="onSortData($event)" matSort>
+
+      <!-- forename Column -->
+      <ng-container matColumnDef="forename">
+        <mat-header-cell *matHeaderCellDef mat-sort-header i18n>Vorname</mat-header-cell>
+        <mat-cell *matCellDef="let user">
+          <div [matTooltip]="user.forename">{{user.forename}}</div>
+        </mat-cell>
+      </ng-container>
+
+      <!-- surname Column -->
+      <ng-container matColumnDef="surname">
+        <mat-header-cell *matHeaderCellDef mat-sort-header i18n>Name</mat-header-cell>
+        <mat-cell *matCellDef="let user">
+          <div [matTooltip]="user.surname">{{user.surname}}</div>
+        </mat-cell>
+      </ng-container>
+
+      <!-- username Column -->
+      <ng-container matColumnDef="username">
+        <mat-header-cell *matHeaderCellDef mat-sort-header i18n>Benutzername</mat-header-cell>
+        <mat-cell *matCellDef="let user">
+          <div [matTooltip]="user.username">{{user.username}}</div>
+        </mat-cell>
+      </ng-container>
+
+      <!-- email Column -->
+      <ng-container matColumnDef="email">
+        <mat-header-cell *matHeaderCellDef mat-sort-header class="f-2 email-cell" i18n>Email</mat-header-cell>
+        <mat-cell *matCellDef="let user" class="f-2 email-cell">
+          <div [matTooltip]="user.email">{{user.email}}</div>
+        </mat-cell>
+      </ng-container>
+
+      <!-- department Column -->
+      <ng-container matColumnDef="department">
+        <mat-header-cell *matHeaderCellDef mat-sort-header i18n>Abteilung</mat-header-cell>
+        <mat-cell class="department-cell" *matCellDef="let user">
+          <div [matTooltip]="user.department">{{user.department}}</div>
+        </mat-cell>
+      </ng-container>
+
+      <!-- signature Column -->
+      <ng-container matColumnDef="signature">
+        <mat-header-cell *matHeaderCellDef mat-sort-header class="signature-cell center-cell" i18n>Signature</mat-header-cell>
+        <mat-cell *matCellDef="let user" class="signature-cell center-cell">
+          <span *ngIf="user.signature" i18n>Ja</span>
+          <span *ngIf="!user.signature" i18n>Nein</span>
+        </mat-cell>
+      </ng-container>
+
+      <!-- authority Column -->
+      <ng-container matColumnDef="authority">
+        <mat-header-cell *matHeaderCellDef class="authority-cell" i18n>Rolle</mat-header-cell>
+        <mat-cell *matCellDef="let user" class="authority-cell">
+          <div [matTooltip]="user.authorityName">
+            <span *ngIf="matchRole(user,AuthAdministrator)" i18n>Administrator</span>
+            <span *ngIf="matchRole(user,AuthTeam)" i18n>Teamleiter</span>
+            <span *ngIf="matchRole(user,AuthComisioning)" i18n>Inbetriebsetzung</span>
+            <span *ngIf="matchRole(user,AuthProduction)" i18n>Produktion</span>
+          </div>
+        </mat-cell>
+      </ng-container>
+
+      <!-- Action edit Column -->
+      <ng-container matColumnDef="action-edit">
+        <mat-header-cell *matHeaderCellDef class="icon-cell center-cell"></mat-header-cell>
+        <mat-cell *matCellDef="let user" class="icon-cell center-cell">
+          <button mat-icon-button (click)="openEditUserDialog(user)" matTooltip="Bearbeiten" i18n-matTooltip>
+            <mat-icon>edit</mat-icon>
+          </button>
+        </mat-cell>
+      </ng-container>
+
+      <!-- Action reset Column -->
+      <ng-container matColumnDef="action-reset">
+        <mat-header-cell *matHeaderCellDef class="icon-cell center-cell"></mat-header-cell>
+        <mat-cell *matCellDef="let user" class="icon-cell center-cell">
+          <button mat-icon-button (click)=" openResetUserPassword(user)" matTooltip="Passwort zurücksetzen"
+                  i18n-matTooltip>
+            <mat-icon>replay</mat-icon>
+          </button>
+        </mat-cell>
+      </ng-container>
+
+      <!-- Action delete Column -->
+      <ng-container matColumnDef="action-delete">
+        <mat-header-cell *matHeaderCellDef class="icon-cell center-cell"></mat-header-cell>
+        <mat-cell *matCellDef="let user" class="icon-cell center-cell">
+          <button *ngIf="!isCurrentUser(user)" mat-icon-button (click)=" openDeleteUserDialog(user)"  matTooltip="Löschen" i18n-matTooltip>
+          <mat-icon>delete</mat-icon>
+        </button>
+          <button *ngIf="isCurrentUser(user)" mat-icon-button disabled (click)=" openDeleteUserDialog(user)"  matTooltip="Löschen" i18n-matTooltip>
+            <mat-icon>delete</mat-icon>
+          </button>
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" (page)="onPageUserChange($event)"
+                   showFirstLastButtons></mat-paginator>
+
+  </mat-card-content>
+
+</mat-card>
+
+<ng-template #resetUserDialogTemplate let-user>
+  <div class="dialog small">
+    <h2 mat-dialog-title class="d-flex align-items-center">
+      <span class="mr-1" i18n>Passwort zurücksetzen</span>
+      <button mat-icon-button mat-dialog-close class="ml-auto">
+        <mat-icon>clear</mat-icon>
+      </button>
+    </h2>
+    <div mat-dialog-content>
+      <p i18n>Möchten Sie wirklich das Passwort für den Benutzer <b><i>{{user.username}}</i></b> zurücksetzen?</p>
+    </div>
+    <div mat-dialog-actions>
+      <button mat-raised-button mat-dialog-close class="ml-auto" i18n>Nein</button>
+      <button mat-raised-button [mat-dialog-close]="true" color="primary" cdkFocusInitial i18n>Ja</button>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #deleteUserDialogTemplate let-user>
+  <div class="dialog small">
+    <h2 mat-dialog-title class="d-flex align-items-center">
+      <span class="mr-1" i18n>Benutzer löschen</span>
+      <button mat-icon-button mat-dialog-close class="ml-auto">
+        <mat-icon>clear</mat-icon>
+      </button>
+    </h2>
+    <div mat-dialog-content>
+      <p i18n>Möchten Sie wirklich den Benutzer <b><i>{{user.username}}</i></b> löschen?</p>
+    </div>
+    <div mat-dialog-actions>
+      <button mat-raised-button mat-dialog-close class="ml-auto" i18n>Nein</button>
+      <button mat-raised-button [mat-dialog-close]="true"  color="primary" cdkFocusInitial i18n>Ja</button>
+    </div>
+  </div>
+</ng-template>

@@ -1,0 +1,127 @@
+<mat-toolbar [class.light]="!isDarkTheme()">
+  <mat-toolbar-row>
+
+    <button mat-icon-button aria-label="Toggle Navigation" (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <img src="assets/images/logo_white.png" style="margin-left: 20px;max-height: 80%;max-width: 200px;"
+         alt="Stadler_Logo">
+
+    <div class="ml-auto project-select"></div>
+    <mat-divider [vertical]="true"></mat-divider>
+
+    <img class="mx-2 flag flag-icon" src="assets/flags/gb.svg" [ngClass]="{current: isCurrentLocale('en')}" (click)="setLanguage('en')"/>
+    <img class="mx-2 flag flag-icon" src="assets/flags/de.svg" [ngClass]="{current: isCurrentLocale('de')}" (click)="setLanguage('de')"/>
+
+    <ng-container *ngIf="showIdle()">
+      <mat-divider [vertical]="true"></mat-divider>
+
+      <div class="idle-timer">
+        <mat-icon style="color: yellow;">timer</mat-icon>
+        <i>{{idleState()}} <span i18n>Minute(n)</span></i>
+      </div>
+    </ng-container>
+
+    <mat-divider [vertical]="true"></mat-divider>
+
+    <div class="user-setting" [matMenuTriggerFor]="menu">
+      <span>{{userAuth.username()}}</span>
+      <mat-icon>more_vert</mat-icon>
+    </div>
+
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/settings">
+        <mat-icon>settings_applications</mat-icon>
+        <span i18n>Einstellungen</span>
+      </button>
+      <button mat-menu-item (click)="invalidate()">
+        <mat-icon>exit_to_app</mat-icon>
+        <span i18n>Ausloggen</span>
+      </button>
+    </mat-menu>
+
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #drawer mode="side" opened role="navigation">
+    <div class="nav-drawer-container">
+      <mat-nav-list>
+        <mat-list-item routerLink='/dashboard' routerLinkActive="active">
+          <mat-icon>home</mat-icon>
+          <span i18n>Dashboard</span>
+        </mat-list-item>
+      </mat-nav-list>
+      <mat-accordion>
+        <mat-expansion-panel expanded>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon>notes</mat-icon>
+              <span i18n>Auswertung</span></mat-panel-title>
+            <mat-panel-description></mat-panel-description>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <mat-list-item routerLink="/test-unit" routerLinkActive="active">
+              <mat-icon>desktop_windows</mat-icon>
+              <span i18n>Prüfrechner</span>
+            </mat-list-item>
+            <mat-list-item routerLink="/deficiencies" routerLinkActive="active">
+              <mat-icon>build</mat-icon>
+              <span i18n>Mängelliste</span>
+            </mat-list-item>
+            <mat-list-item routerLink="/equipments" routerLinkActive="active">
+              <mat-icon>devices_other</mat-icon>
+              <span i18n>Prüfmittelliste</span>
+            </mat-list-item>
+            <mat-list-item routerLink="/comments" routerLinkActive="active" *ngIf="userAuth.isTeam() || userAuth.isAdministrator()">
+              <mat-icon>textsms</mat-icon>
+              <span i18n>Prüfkommentare</span>
+            </mat-list-item>
+            <mat-list-item routerLink="/option-report" routerLinkActive="active">
+              <mat-icon>note</mat-icon>
+              <span i18n>Reports</span>
+            </mat-list-item>
+          </mat-nav-list>
+        </mat-expansion-panel>
+      </mat-accordion>
+      <mat-accordion *ngIf="userAuth.isTeam() || userAuth.isAdministrator()">
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon>settings</mat-icon>
+              <span i18n>Verwaltung</span></mat-panel-title>
+            <mat-panel-description></mat-panel-description>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <mat-list-item routerLink='/config' routerLinkActive="active" *ngIf="userAuth.isAdministrator()">
+              <mat-icon>settings</mat-icon>
+              <span i18n>Prüfkonfigurationen</span>
+            </mat-list-item>
+            <mat-list-item routerLink='/user-administration' routerLinkActive="active">
+              <mat-icon>person</mat-icon>
+              <span i18n>Benutzerverwaltung</span>
+            </mat-list-item>
+          </mat-nav-list>
+        </mat-expansion-panel>
+      </mat-accordion>
+      <div class="footer">
+        <div class="version mat-app-background">
+          <div>
+            <span class="mr-2">Frontend</span><span>{{frontendVersion()}}</span>
+          </div>
+          <div>
+            <span class="mr-2">Backend</span><span>{{backendVersion()}}</span>
+          </div>
+        </div>
+        <div class="powered">
+          <span>powered by</span>
+          <img src="assets/images/vipco.png">
+        </div>
+      </div>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

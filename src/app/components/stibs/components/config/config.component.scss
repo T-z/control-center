@@ -1,0 +1,106 @@
+$customGreen : #3a923a;
+
+:host {
+
+  display: block;
+  padding: 2em;
+
+  mat-card {
+    margin: 1em 0;
+  }
+  .upload {
+
+    margin: 2em;
+
+    .controls {
+
+      display: flex;
+      align-items: center;
+
+      button {
+        margin-right: 1em;
+      }
+
+    }
+
+    .indicator {
+
+      visibility: hidden;
+
+      margin-top: 1em;
+      width: 50%;
+
+      &.active {
+        visibility: visible;
+      }
+
+      span {
+        margin-left: 1em;
+      }
+
+    }
+
+  }
+
+  .job-list {
+
+    .actions {
+
+      display: flex;
+      align-items: center;
+
+      .sync {
+
+        margin-right: auto;
+
+        button {
+          margin: 1em 0.3em;
+        }
+
+      }
+
+    }
+
+    mat-table {
+
+      .progress-cell {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+      }
+
+      .state-cell {
+
+        &.failed {
+          color: #c00;
+        }
+
+        &.waiting {
+          color: #ec9538;
+        }
+
+      }
+
+    }
+  }
+
+  mat-tab-group {
+
+    .project-list {
+
+      button.active {
+        color: white;
+        background-color: $customGreen;
+      }
+
+    }
+
+    .vehicle-list {
+
+    }
+
+  }
+
+}

@@ -1,0 +1,57 @@
+<h2 mat-dialog-title>
+  <span class="mr-1" i18n>Benutzer</span>
+  <span *ngIf="user" i18n>bearbeiten</span>
+  <span *ngIf="!user" i18n>erstellen</span>
+  <button mat-icon-button mat-dialog-close class="ml-auto">
+    <mat-icon>clear</mat-icon>
+  </button>
+</h2>
+
+<form [formGroup]="form" (ngSubmit)="saveUser()">
+
+  <mat-dialog-content class="mat-typography">
+
+    <mat-form-field>
+      <input matInput placeholder="Vorname" i18n-placeholder formControlName="forename" maxlength="40">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Nachname" i18n-placeholder formControlName="surname">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Benutzername" i18n-placeholder formControlName="username">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Email" i18n-placeholder formControlName="email">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Abteilung" i18n-placeholder formControlName="department" maxlength="40">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-select placeholder="Rolle" i18n-placeholder formControlName="authorityName" [compareWith]="compareFn">
+        <mat-option [value]="AuthAdministrator" i18n>Administrator</mat-option>
+        <mat-option [value]="AuthTeam" i18n>Teamleiter</mat-option>
+        <mat-option [value]="AuthComisioning" i18n>Inbetriebsetzung</mat-option>
+        <mat-option [value]="AuthProduction" i18n>Produktion</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div class="d-flex justify-content-end">
+      <button mat-button color="accent" mat-mini-fab (click)="$event.preventDefault(); imgFileInput.click()" matTooltip="Signatur">
+        <mat-icon>attachment</mat-icon>
+      </button>
+      <input type="file" hidden #imgFileInput [formControl]="signatureControl">
+    </div>
+
+  </mat-dialog-content>
+
+  <mat-dialog-actions class="justify-content-end">
+    <button mat-raised-button mat-dialog-close i18n>Abbrechen</button>
+    <button mat-raised-button type="submit" color="primary" i18n>Speichern</button>
+  </mat-dialog-actions>
+
+</form>

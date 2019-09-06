@@ -1,0 +1,68 @@
+
+:host {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+mat-card {
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 90vw;
+  max-width: 450px;
+
+  text-align: center;
+  padding-right: 0;
+  padding-left: 0;
+  padding-top: 0;
+
+  .header {
+
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background: linear-gradient(320deg, #02386f 0%, #0b3f75 35%, #e6e6e6 100%);
+
+    padding: 2em;
+
+    .title {
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    .subtitle {
+      font-size: 1.25em;
+    }
+
+  }
+
+  form {
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 2em 2em 1em 2em;
+
+    mat-icon {
+      cursor: pointer;
+    }
+
+  }
+
+  .login-active {
+
+    width: 50%; 
+    display: inline-block;
+
+    span {
+      font-style: italic;
+      font-size: 0.65em;
+    }
+
+  }
+  
+}

@@ -1,0 +1,65 @@
+<h2 class="d-flex a-center">
+  <mat-icon>textsms</mat-icon><span class="ml-2" i18n>Prüfkommentare</span>
+</h2>
+
+<small i18n>Übersicht alle Kommentare bezüglich Projekte und Fahrzeuge</small>
+
+<mat-card>
+
+  <mat-card-title>
+    
+    <mat-form-field>
+      <mat-icon matPrefix>search</mat-icon>
+      <input matInput [formControl]="searchControl" placeholder="Filter" i18n-placeholder>
+    </mat-form-field>
+
+  </mat-card-title>
+
+  <mat-card-content>
+
+    <mat-table [dataSource]="dataSource" matSort (matSortChange)="onSortData($event)">
+
+      <!-- date Column -->
+      <ng-container matColumnDef="date">
+        <mat-header-cell *matHeaderCellDef class="date-cell" mat-sort-header i18n>Datum</mat-header-cell>
+        <mat-cell *matCellDef="let comment" class="date-cell">{{comment.createDate | date}}</mat-cell>
+      </ng-container>
+
+      <!-- category Column -->
+      <ng-container matColumnDef="category">
+        <mat-header-cell *matHeaderCellDef class="center-cell category-cell" mat-sort-header i18n>Kategorie</mat-header-cell>
+        <mat-cell *matCellDef="let comment" class="center-cell category-cell">{{comment.category}}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="project">
+        <mat-header-cell *matHeaderCellDef class="center-cell project-cell" mat-sort-header i18n>Projekt</mat-header-cell>
+        <mat-cell *matCellDef="let comment" class="center-cell project-cell">{{comment.projectName}}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="vehicle">
+        <mat-header-cell *matHeaderCellDef class="center-cell vehicle-cell" mat-sort-header i18n>Fahrzeug</mat-header-cell>
+        <mat-cell *matCellDef="let comment" class="center-cell vehicle-cell">{{comment.vehicleName}}</mat-cell>
+      </ng-container>
+
+      <!-- testcase Column -->
+      <ng-container matColumnDef="testcase">
+        <mat-header-cell *matHeaderCellDef mat-sort-header class="testcase-cell" i18n>Testfall</mat-header-cell>
+        <mat-cell *matCellDef="let comment" class="testcase-cell"><div [matTooltip]="comment.testCase">{{comment.testCase}}</div></mat-cell>
+      </ng-container>
+
+      <!-- comment Column -->
+      <ng-container matColumnDef="comment">
+        <mat-header-cell *matHeaderCellDef class="comment-cell" mat-sort-header i18n>Kommentar</mat-header-cell>
+        <mat-cell *matCellDef="let comment" class="comment-cell"><div [matTooltip]="comment.comment">{{comment.comment}}</div></mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+
+    </mat-table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" (page)="onPageCommentChange($event)" showFirstLastButtons></mat-paginator>
+
+  </mat-card-content>
+
+</mat-card>

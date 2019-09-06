@@ -1,0 +1,36 @@
+
+:host {
+
+  display: flex;
+  padding: 2em;
+
+  .chart {
+    flex: 1;
+    padding: 2em;
+  }
+
+  .info {
+
+    width: 20%;
+    max-width: 200px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .time-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #ddd;
+      margin: 1em;
+    }
+
+  }
+
+  .online{
+    color: #3a923a;
+  }
+
+}

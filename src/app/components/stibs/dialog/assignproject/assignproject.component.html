@@ -1,0 +1,49 @@
+
+<h2 mat-dialog-title>
+  <span i18n>Projekt zuordnnen</span>
+  <button mat-icon-button mat-dialog-close><mat-icon>clear</mat-icon></button>
+</h2>
+
+<span class="node my-2">
+  <span class="mr-2" i18n>Rechnername:</span>
+  <i>{{node.name}}</i>
+</span>
+
+<mat-dialog-content>
+  <mat-table [dataSource]="dataSource">
+
+    <ng-container matColumnDef="Checkbox" >
+      <mat-header-cell *matHeaderCellDef class="icon-cell">
+        <mat-checkbox (change)="$event ? masterToggle() : null"
+                      [checked]="selection.hasValue() && isAllSelected()"
+                      [indeterminate]="selection.hasValue() && !isAllSelected()"
+                      [aria-label]="checkboxLabel()"
+                      [disabled]="false">
+        </mat-checkbox>
+      </mat-header-cell>
+      <mat-cell *matCellDef="let project; let i = index" class="icon-cell">
+
+        <mat-checkbox (click)="$event.stopPropagation();checkFunction(project)"
+                      (change)="$event ? selection.toggle(project) : null"
+                      [checked]="selection.isSelected(project)"
+                      [aria-label]="checkboxLabel(project, i)">
+        </mat-checkbox>
+
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Project">
+      <mat-header-cell *matHeaderCellDef class="f-1" i18n>Name</mat-header-cell >
+      <mat-cell *matCellDef="let project" class="f-1">{{project.name}}</mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
+</mat-dialog-content>
+
+<mat-dialog-actions class="justify-content-end">
+  <button mat-raised-button (click)="assignProject()" color="primary" i18n> Speichern</button>
+  <button mat-raised-button mat-dialog-close i18n>Abbrechen</button>
+</mat-dialog-actions>

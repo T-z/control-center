@@ -1,0 +1,8 @@
+<div i18n="">
+  <section *ngIf="succes">
+    <span class="message">{{ titel }}, Update </span><span class="action">erfolgreich durchgeführt</span>
+  </section>
+  <section *ngIf="!succes" >
+    <span class="message">{{ titel }}, Update </span><span class="action">fehlgeschlagen</span>
+  </section>
+</div>

@@ -1,0 +1,144 @@
+  <h2>
+    <mat-icon>build</mat-icon><span class="ml-2" i18n>Mängelliste</span>
+  </h2>
+
+   <small i18n>Übersicht der Mängel für Projekte und Fahrzeuge</small>
+
+  <mat-card>
+      <div>
+        <div class="d-flex">
+        <mat-form-field class="ml-2">
+          <mat-select i18n-placeholder placeholder="Projekt" [compareWith]="compareFn" [formControl]="projectControl">
+            <mat-option i18n>None</mat-option>
+            <mat-option *ngFor="let project of projects" [value]="project">{{project.name}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+  
+        <mat-form-field class="mx-2">
+          <mat-select i18n-placeholder placeholder="Fahrzeug" [compareWith]="compareFn" [formControl]="vehicleControl">
+            <mat-option i18n>None</mat-option>
+            <mat-option *ngFor="let vehicle of vehicles" [value]="vehicle">{{vehicle.name}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+  
+        <mat-form-field class="mx-2 input-search">
+          <mat-icon matPrefix>search</mat-icon>
+          <input matInput [formControl]="searchControl" i18n placeholder="Filter">
+        </mat-form-field>
+      </div>
+         <div>
+            <mat-checkbox class="ml-4" [formControl]="stateControl" i18n>erledigt</mat-checkbox>
+        </div>
+    </div>
+      <mat-card-content>
+          <mat-table [dataSource]="dataSource" (matSortChange)="onSortData($event)" matSort>
+
+        <!-- CreateDate Column -->
+        <ng-container matColumnDef="CreateDate">
+          <mat-header-cell *matHeaderCellDef mat-sort-header class="date-cell" i18n>Datum</mat-header-cell>
+          <mat-cell class="date-cell" *matCellDef="let defect">{{defect.createDate | date}}</mat-cell>
+        </ng-container>
+
+        <!-- Vehicle Column -->
+        <ng-container matColumnDef="Vehicle">
+          <mat-header-cell *matHeaderCellDef mat-sort-header i18n>Fahrzeug</mat-header-cell>
+          <mat-cell *matCellDef="let defect">{{defect.vehicle.name}}</mat-cell>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="Creator">
+          <mat-header-cell *matHeaderCellDef mat-sort-header class="creator-cell" i18n>Ersteller</mat-header-cell>
+          <mat-cell *matCellDef="let defect" class="creator-cell" ><div [matTooltip]="defect.creator">{{defect.creator}}</div></mat-cell>
+        </ng-container>
+
+        <!-- Location Column -->
+        <ng-container matColumnDef="Location">
+          <mat-header-cell *matHeaderCellDef mat-sort-header class="location-cell" i18n>Ort</mat-header-cell>
+          <mat-cell *matCellDef="let defect" class="location-cell"><div [matTooltip]="defect.location">{{defect.location}}</div></mat-cell>
+        </ng-container>
+
+        <!-- Initiator Column -->
+        <ng-container matColumnDef="Initiator">
+          <mat-header-cell *matHeaderCellDef mat-sort-header class="initiator-cell" i18n>Zuständige</mat-header-cell>
+          <mat-cell *matCellDef="let defect" class="initiator-cell">{{defect.initiator}} </mat-cell>
+        </ng-container>
+
+        <!-- Description Column -->
+        <ng-container matColumnDef="Description">
+          <mat-header-cell *matHeaderCellDef mat-sort-header class="description-cell" i18n>Fehlerbeschreibung</mat-header-cell>
+          <mat-cell class="description-cell" *matCellDef="let defect"><div [matTooltip]="defect.description">{{defect.description}}</div></mat-cell>
+        </ng-container>
+
+        <!-- State Column -->
+        <ng-container matColumnDef="State">
+          <mat-header-cell *matHeaderCellDef mat-sort-header i18n class="center-cell">Status</mat-header-cell>
+          <mat-cell *matCellDef="let defect" class="center-cell">{{defect.state}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="More">
+          <mat-header-cell *matHeaderCellDef class="icon-cell" i18n></mat-header-cell>
+          <mat-cell class="icon-cell" *matCellDef="let defect">
+            <button mat-icon-button i18n-matTooltip matTooltip="mehr..." (click)="open_MoreInfoDefectDialog(defect)">
+              <mat-icon>info</mat-icon>
+            </button>
+          </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+          <mat-paginator [pageSizeOptions]="[5, 10, 20]" (page)="onPageDefectChange($event)" showFirstLastButtons>
+          </mat-paginator>
+    </mat-card-content>
+  </mat-card>
+
+  <ng-template #moreInfoTemplate let-defect>
+    <div>
+      <h3 mat-dialog-title class="d-flex">
+        <span i18n>Mehr Informationen</span>
+        <button mat-icon-button mat-dialog-close class="ml-auto">
+          <mat-icon>clear</mat-icon>
+        </button>
+      </h3>
+
+      <mat-dialog-content class="d-flex f-column p-12 dialog-content">
+
+        <div class="my-4">
+          <div><b i18n>Erstell-Datum:</b><span>{{defect.createDate | date}}</span></div>
+          <div><b i18n>Ersteller:</b><span>{{defect.creator}}qwertzzoozozppbbvvbppp vbvcvdvlvlcv</span></div>
+          <div><b i18n>Fahrzeug:</b><span>{{defect.vehicle.name}}</span></div>
+          <div><b i18n>Fehlerbeschreibung:</b><span>{{defect.description}}</span></div>
+          <div><b i18n>Von:</b><span>{{defect.doneBy}}</span></div>
+          <div><b i18n>Ort:</b><span>{{defect.location}}</span></div>
+        </div>
+
+        <mat-divider></mat-divider>
+
+        <div class="my-4">
+          <div><b i18n>Zuständige:</b><span>{{defect.initiator}}</span></div>
+          <div><b i18n>Änderungs-Datum:</b><span>{{defect.modifyDate}}</span></div>
+          <div><b i18n>Status:</b><span>{{defect.state}}</span></div>
+        </div>
+
+        <mat-divider></mat-divider>
+
+        <div class="my-4">
+          <div><b i18n>Ziel-Nummer:</b><span>{{defect.targetNumber}}</span></div>
+          <div><b i18n>Kommentar:</b><span>{{defect.comment}}</span></div>
+          <div><b i18n>Zugteil:</b><span>{{defect.trainPart}}</span></div>
+          <div><b i18n>Typ:</b><span>{{defect.type}}</span></div>
+          <div><b i18n>Bauteil:</b><span>{{defect.unit}}</span></div>
+        </div>
+
+        <mat-divider></mat-divider>
+
+        <div class="my-4">
+          <div><b i18n>Fehlerbehebung Stadler [h]:</b><span>{{defect.timeFix1}}</span></div>
+          <div><b i18n>Fehlerbehebung andere [h]:</b><span>{{defect.timeFix2}}</span></div>
+          <div><b i18n>Fehlersuche[h]:</b><span>{{defect.timeSearch}}</span></div>
+        </div>
+
+      </mat-dialog-content>
+    </div>
+  </ng-template>
+

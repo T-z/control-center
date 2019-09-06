@@ -1,0 +1,180 @@
+
+////////////////////////////////////////////////////////////////////////////////////////
+// margin/padding stuff
+////////////////////////////////////////////////////////////////////////////////////////
+
+$sides: (top, bottom, left, right);
+$spaces: (0.25, 0.55, 0.65, 0.75, 0.85, 1.00, 1.15 , 1.45, 1.75 ,2.00, 2.15, 2.45, 2.75);
+
+.ml-auto {
+  margin-left: auto !important;
+}
+
+.mr-auto {
+  margin-right: auto !important;
+}
+
+.mt-auto {
+  margin-top: auto !important;
+}
+
+.m-auto {
+  margin: auto !important;
+}
+
+.m-0 {
+  margin: 0 0 !important;
+}
+
+.p-0 {
+  padding: 0 0 !important;
+}
+
+@each $space in $spaces {
+
+  $target: index($spaces, $space);
+
+  .m-#{$target} {
+    margin: #{$space * 0.8}em #{$space}em !important;
+  }
+
+  .my-#{$target} {
+    margin: #{$space}em 0 !important;
+  }
+
+  .mx-#{$target} {
+    margin: 0 #{$space}em !important;
+  }
+
+  .p-#{$target} {
+    padding: #{$space * 0.8}em #{$space}em !important;
+  }
+
+  .py-#{$target} {
+    padding: #{$space}em 0 !important;
+  }
+
+  .px-#{$target} {
+    padding: 0 #{$space}em !important;
+  }
+
+  @each $side in $sides {
+
+    .m#{str-slice($side, 0, 1)}-#{$target} {
+      margin-#{$side}: #{$space}em !important;
+    }
+
+    .p#{str-slice($side, 0, 1)}-#{$target} {
+      padding-#{$side}: #{$space}em !important;
+    }
+
+  }
+
+}
+
+////////////////////////////////////////////////////////////////////////////////////////
+// Theme / Color / Background-color stuff
+////////////////////////////////////////////////////////////////////////////////////////
+
+.c-red {
+  color: red !important;
+}
+
+.bg-red {
+  background-color: red !important;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////
+// flexbox stuff
+////////////////////////////////////////////////////////////////////////////////////////
+
+$flex-weights: 10;
+
+@for $i from 1 through $flex-weights {
+  .f-#{$i} {
+    flex: $i !important;
+  }
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.f-column {
+  flex-direction: column;
+}
+
+.justify-content-start {
+  justify-content: flex-start;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-space-between {
+  justify-content: space-between;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-stretch {
+  align-items: stretch;
+}
+
+.align-content-center {
+  align-content: center;
+}
+
+.align-content-stretch {
+  align-content: stretch;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////
+// table stuff
+////////////////////////////////////////////////////////////////////////////////////////
+
+.center-cell {
+  justify-content: center;
+}
+
+.date-cell {
+  min-width: 100px;
+  max-width: 125px;
+}
+
+.datetime-cell {
+  min-width: 150px;
+  max-width: 150px;
+}
+
+.icon-cell {
+  min-width: 40px;
+  max-width: 40px;
+}
+
+.flag-icon {
+  height: 20px;
+}
+
+mat-cell {
+  > div {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.dialog {
+
+  &.small {
+    max-width: 300px;
+  }
+
+}

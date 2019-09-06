@@ -1,0 +1,72 @@
+<h2 class="d-flex a-center">
+  <mat-icon>desktop_windows</mat-icon><span class="ml-2" i18n>Prüfrechner</span>
+</h2>
+
+<mat-card>
+
+  <mat-form-field>
+    <mat-icon matPrefix>search</mat-icon>
+    <input matInput  [formControl]="searchControl"  placeholder="Filter">
+  </mat-form-field>
+
+  <mat-table #nodeMetaSort="matSort" [dataSource]="dataSource_testUnit" (matSortChange)="onSortData($event)" matSort>
+
+    <ng-container matColumnDef="Name">
+      <mat-header-cell *matHeaderCellDef mat-sort-header class="name-cell"  i18n>Rechnername</mat-header-cell>
+      <mat-cell *matCellDef="let node" class="name-cell" ><div [matTooltip]="node.name">{{node.name}}</div></mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="Alias">
+      <mat-header-cell *matHeaderCellDef mat-sort-header class="alias-cell" i18n>Alias</mat-header-cell>
+      <mat-cell *matCellDef="let node" class="alias-cell" ><div [matTooltip]="node.alias">{{node.alias}}</div></mat-cell>
+    </ng-container>    
+    <ng-container matColumnDef="Version">
+      <mat-header-cell *matHeaderCellDef class="software-version-cell" i18n>Softwareversion </mat-header-cell>
+      <mat-cell *matCellDef="let node" class="software-version-cell"><div>{{node.version}}</div></mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="Pversion">
+      <mat-header-cell *matHeaderCellDef  class="project-version-cell" i18n>Projektversion</mat-header-cell>
+      <mat-cell *matCellDef="let node" class="project-version-cell"><div [matTooltip]="node.activeProjectVersion">{{node.activeProjectName}}<span *ngIf="node.activeProjectVersion">[{{node.activeProjectVersion}}]</span></div></mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="Vehicle">
+      <mat-header-cell *matHeaderCellDef mat-sort-header class="vehicle-cell" i18n>Fahrzeug</mat-header-cell>
+      <mat-cell *matCellDef="let node" class="vehicle-cell"><div [matTooltip]="node.vehicle">{{node.vehicle}}</div></mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="VehicleRelease">
+      <mat-header-cell *matHeaderCellDef mat-sort-header class="vehicle-version-cell" i18n>Fahrzeugversion</mat-header-cell>
+      <mat-cell *matCellDef="let node" class="vehicle-version-cell"><div>{{node.vehicleRelease}}</div></mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="LastHitDate">
+      <mat-header-cell *matHeaderCellDef mat-sort-header class="datetime-cell" i18n>Letzte Verbindung</mat-header-cell>
+      <mat-cell *matCellDef="let node" class="datetime-cell">
+          <div [matTooltip]="node.lastHitDate | date">{{node.lastHitDate | date: 'short'}}</div>
+      </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="Ip">
+      <mat-header-cell *matHeaderCellDef class="center-cell icon-cell"></mat-header-cell>
+      <mat-cell *matCellDef="let node" class="center-cell icon-cell" matTooltip="Node öffnen" i18n-matTooltip>
+        <a mat-icon-button *ngIf="node.online" [href]="'http://' + node.ip" target="_blank"><mat-icon>link</mat-icon></a>
+      </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="ProjectAssignment">
+    <mat-header-cell *matHeaderCellDef class="center-cell icon-cell"></mat-header-cell>
+    <mat-cell *matCellDef="let node" class="center-cell icon-cell" matTooltip="Projekt zuordnen" i18n-matTooltip>
+      <button mat-icon-button (click)="openProjectAssignmentDialog(node)"><mat-icon>shop_two</mat-icon></button>
+    </mat-cell>
+  </ng-container>
+    <ng-container matColumnDef="deleteUnit">
+      <mat-header-cell *matHeaderCellDef class="center-cell icon-cell"></mat-header-cell>
+      <mat-cell *matCellDef="let node" class="center-cell icon-cell" matTooltip="Rechner deaktivate" i18n-matTooltip>
+        <button mat-icon-button><mat-icon>delete</mat-icon></button>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
+  <mat-paginator #nodeMetaPaginator [pageSizeOptions]="[5, 10, 20]" (page)="onPageNodeChange($event)"
+    showFirstLastButtons>
+
+  </mat-paginator>
+
+</mat-card>
